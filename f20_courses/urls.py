@@ -19,7 +19,5 @@ from django.conf.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('CLAS199-F20/', include('clas199.urls')),
-    path('LATN213-F20/', include('latn213.urls')),
-    path('LATN399-F20/', include('latn399.urls')),
+    path('', include('core.urls')),
 ]

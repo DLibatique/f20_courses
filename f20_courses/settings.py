@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'latn213',
     'clas199',
     'latn399',
+    'core',
 ]
 
 MIDDLEWARE = [
