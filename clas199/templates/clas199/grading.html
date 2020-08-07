@@ -4,8 +4,8 @@
 <div class="row">
 
   <div class="col-4">
-    <div class="sticky-top" style="top:65px;">
-      <nav id="navbar-example3" class="nav nav-pills flex-column text-right position-sticky">
+    <div {%if request.user_agent.is_mobile %}class="" {% else %}class="sticky-top" {% endif %} style="top:65px;">
+      <nav id="navbar-example3" class="nav nav-pills flex-column text-right">
         <a class="nav-link" href="#grading-contract">Grading Contract</a>
         <a class="nav-link" href="#quizzes">Quizzes</a>
         <a class="nav-link" href="#responses">Responses</a>
@@ -18,61 +18,61 @@
 
   <div class="col-8 border-left px-5">
 
-  	<h4 id="grading-contract">Grading Contract</h4>
+    <h4 id="grading-contract">Grading Contract</h4>
     <p>Grading and assessments in this course will be unorthodox. We will be following a form of <strong>specification grading</strong>, in which all assignments and assessments (including quizzes) are graded on a <strong>satisfactory or unsatisfactory</strong> basis (except for the midterm and final, on which see below). Each assignment and assessment will have an explicit set of guidelines and criteria for what will be considered “satisfactory.” Your semester grade, then, will be based on the number and type of satisfactory assignments and assessments completed. In other words, <strong>you will be in control of your semester grade</strong> — you decide the grade that you want and commit as much time and energy towards that grade as you desire.</p>
 
     <p>The following is a rubric for semester-end grades in the course.</p>
 
     <table class='table'>
-        <thead>
-            <tr>
-                <th>&nbsp;</th>
-                <th><strong>D</strong></th>
-                <th><strong>D+</strong></th>
-                <th><strong>C-</strong></th>
-                <th><strong>B-</strong></th>
-                <th><strong>A-</strong></th>
-                <th><strong>A</strong></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-                <td class="row-start text-right"><strong>Quizzes</strong> (max 120)</td>
-                <td>20</td>
-                <td>40</td>
-                <td>60</td>
-                <td>80</td>
-                <td>100</td>
-                <td>115</td>
-            </tr>
-            <tr>
-                <td class="row-start text-right"><strong>Responses</strong></td>
-                <td>2</td>
-                <td>4</td>
-                <td>6</td>
-                <td>8</td>
-                <td>10</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td class="row-start text-right"><strong>Creative Projects</strong></td>
-                <td>0</td>
-                <td>0</td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td class="row-start text-right"><strong>Midterm and Final*</strong> (max 200)</td>
-                <td>120</td>
-                <td>130</td>
-                <td>150</td>
-                <td>160</td>
-                <td>170</td>
-                <td>180</td>
-            </tr>
-        </tbody>
+      <thead>
+        <tr>
+          <th>&nbsp;</th>
+          <th><strong>D</strong></th>
+          <th><strong>D+</strong></th>
+          <th><strong>C-</strong></th>
+          <th><strong>B-</strong></th>
+          <th><strong>A-</strong></th>
+          <th><strong>A</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-start text-right"><strong>Quizzes</strong> (max 120)</td>
+          <td>20</td>
+          <td>40</td>
+          <td>60</td>
+          <td>80</td>
+          <td>100</td>
+          <td>115</td>
+        </tr>
+        <tr>
+          <td class="row-start text-right"><strong>Responses</strong></td>
+          <td>2</td>
+          <td>4</td>
+          <td>6</td>
+          <td>8</td>
+          <td>10</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td class="row-start text-right"><strong>Creative Projects</strong></td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td class="row-start text-right"><strong>Midterm and Final*</strong> (max 200)</td>
+          <td>120</td>
+          <td>130</td>
+          <td>150</td>
+          <td>160</td>
+          <td>170</td>
+          <td>180</td>
+        </tr>
+      </tbody>
     </table>
 
     <p>To achieve a certain grade level, you must complete the listed number of satisfactory assignments or requirements from each of four different categories. For example, if you want a B- for the semester, you must complete 8 responses to secondary readings and 2 creative projects, and you must have earned at least 80 points over all 12 quizzes and 160 points over the midterm and the final (see details below). When you have completed the minimum number of satisfactory assignments for the final grade that you want, you do not need to submit further examples of that assignment type.</p>
@@ -99,7 +99,7 @@
     <h4 id="responses">Responses</h4>
     <p>This requirement asks you to respond to secondary articles, chapters, or podcasts that treat ancient gender and sexuality. Articles or chapters to which you can respond are designated with an asterisk in the <a href="{% url 'clas199:schedule' %}">course schedule</a>. You are encouraged to write responses to articles, chapters, or podcasts that deal with a topic in which you are interested for any given week! So, for example, in Week 4, we will discuss symposium culture and lyric poetry, and one element of the conversation will be the Greek poetess Sappho. If you&#39;re particularly interested in her, you should write a response to Ella Haselswerdt&#39;s <em>Eidolon</em> piece, &quot;Re-Queering Sappho.&quot;</p>
 
-    <p>You may submit up to <strong>one (1) response per week</strong>, defined as the period from one Saturday at 12am to the next Friday at 11:59pm. To make this clearer, response submission deadlines are listed for each week of the semester in the <a href="schedule">course schedule</a>. If you miss a response deadline, you will not have the opportunity to make it up later unless you use a token, so please plan accordingly and be proactive in informing me if you think you&#39;ll miss a deadline.</p>
+    <p>You may submit up to <strong>one (1) response per week</strong>, defined as the period from one Saturday at 12am to the next Friday at 11:59pm (except for the last, which will be due on the final day of class). To make this clearer, response submission deadlines are listed for each week of the semester in the <a href="schedule">course schedule</a>. If you miss a response deadline, you will not have the opportunity to make it up later unless you use a token, so please plan accordingly and be proactive in informing me if you think you&#39;ll miss a deadline.</p>
 
     <p>Your response should be written in one of three formats: <strong>3-2-1</strong>, <strong>argument analysis</strong>, or <strong>personal reflection</strong>. All three formats should be <strong>1-2pp. double-spaced</strong>. If you go beyond 2 pp., that’s fine too; 1-2pp. is just a general guideline. <strong>The response will be graded “satisfactory” if it answers each prompt or question under the appropriate heading below.</strong></p>
 
@@ -108,28 +108,28 @@
     <hr>
 
     <h5 id="3-2-1">3-2-1</h5>
-      <ul>
-        <li>Write down <strong>three (3)</strong> things that you learned.</li>
-        <li>Write down <strong>two (2)</strong> things that you found interesting and want to learn more about.</li>
-        <li>Write down <strong>one (1)</strong> thing that was unclear or one question that you still have about the material.</li>
-      </ul>
+    <ul>
+      <li>Write down <strong>three (3)</strong> things that you learned.</li>
+      <li>Write down <strong>two (2)</strong> things that you found interesting and want to learn more about.</li>
+      <li>Write down <strong>one (1)</strong> thing that was unclear or one question that you still have about the material.</li>
+    </ul>
 
-      <p>A 3-2-1 does not need to be written in paragraph form; you can use bullet points or numbered lists.</p>
+    <p>A 3-2-1 does not need to be written in paragraph form; you can use bullet points or numbered lists.</p>
 
     <hr>
 
     <h5 id="argument-analysis">Argument Analysis</h5>
-      <p>Answer the following questions:</p>
-        <ul>
-          <li>What is the author’s main argument?</li>
-          <li>How do they make that argument? What evidence do they provide?</li>
-          <li>Do you agree or disagree? Or, put differently, does the author make their case persuasively?</li>
-        </ul>
+    <p>Answer the following questions:</p>
+    <ul>
+      <li>What is the author’s main argument?</li>
+      <li>How do they make that argument? What evidence do they provide?</li>
+      <li>Do you agree or disagree? Or, put differently, does the author make their case persuasively?</li>
+    </ul>
 
     <hr>
 
     <h5 id="personal-reflection">Personal Reflection</h5>
-      <p>If the article speaks to you on a personal level (in terms of lived experience, personality traits, gender or sexual orientation, political affiliation, etc.), what resonates with you? How can you connect the topics or ideas in the article to events, relationships, or beliefs in your own life? (Disclaimer: see <a href="{% url 'clas199:policies' %}#mandated-reporter">“Mandated Reporter” section of Policies</a>.)</p>
+    <p>If the article speaks to you on a personal level (in terms of lived experience, personality traits, gender or sexual orientation, political affiliation, etc.), what resonates with you? How can you connect the topics or ideas in the article to events, relationships, or beliefs in your own life? (Disclaimer: see <a href="{% url 'clas199:policies' %}#mandated-reporter">“Mandated Reporter” section of Policies</a>.)</p>
 
     <hr>
 
@@ -149,7 +149,7 @@
 
     <hr>
 
-  	<h4 id="midtermfinal-alternative-essay">Midterm/Final Alternative: Essay</h4>
+    <h4 id="midtermfinal-alternative-essay">Midterm/Final Alternative: Essay</h4>
 
     <p><strong>PLEASE NOTE</strong>: If you know that you&#39;re a stronger essay writer than exam taker, you have the option of replacing one or both of the exams with an essay. If you choose this option, you will be required to make and substantiate an argument about gender and sexuality in the ancient world in a <strong>5-6 pp. essay</strong>. To be clear, 5-6 pages is not a lot of space; the challenge of this essay is making a persuasive argument using proper primary and scholarly secondary evidence in a small amount of space. Sample prompts include:</p>
 
@@ -176,7 +176,7 @@
 
     <hr>
 
-  	<h4 id="creative-projects">Creative Projects</h4>
+    <h4 id="creative-projects">Creative Projects</h4>
     <p><a href="creative-projects">Creative Project Prompts</a></p>
 
     <p>I will designate a number of possible projects for you to complete that will draw on your creativity. The tasks range from writing poetry to creating artwork, recording a podcast to recording a video, analyzing an object to making a pitch to a journal to creating a playlist. If you would like to complete a creative project that isn’t listed in the possibilities <a href="{% url 'clas199:creative_projects' %}">here</a>, you are more than welcome to pitch your idea for a creative project to me via e-mail or in office hours.</p>
@@ -190,10 +190,10 @@
     <p>You may submit up to <strong>four (4) creative projects</strong> according to the following suggested deadlines:</p>
 
     <ul>
-      <li>Creative Project #1: ???  </li>
-      <li>Creative Project #2: ???  </li>
-      <li>Creative Project #3: ???  </li>
-      <li>Creative Project #4: ???  </li>
+      <li>Creative Project #1: ??? </li>
+      <li>Creative Project #2: ??? </li>
+      <li>Creative Project #3: ??? </li>
+      <li>Creative Project #4: ??? </li>
     </ul>
 
     <p>The only hard deadline is that all creative projects must be submitted <strong>by 11:59pm on ???</strong>.</p>
