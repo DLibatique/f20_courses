@@ -1,10 +1,13 @@
 {% extends 'clas199/page.html' %}
 {% block content %}
 
+{% if not x %}
 <div class="row">
 
   <div class="col-4">
-    <div {% if not x %}class="sticky-top" {% endif %} style="top:65px;">
+    {% endif %}
+    <div class="sticky-top" style="top:65px;">
+      {% if not x %}
       <nav id="navbar-example3" class="nav nav-pills flex-column text-right">
         <a class="nav-link" href="#grading-contract">Grading Contract</a>
         <a class="nav-link" href="#quizzes">Quizzes</a>
@@ -13,11 +16,34 @@
         <a class="nav-link" href="#midtermfinal-alternative-essay">Midterm/Final Alternative: Essay</a>
         <a class="nav-link" href="#creative-projects">Creative Projects</a>
       </nav>
-    </div>
+      {% else %}
+      <!-- mobile -->
+      <nav class="nav">
+        <div class="dropdown">
+
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Grading Section
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+            <a class="dropdown-item" href="#grading-contract">Grading Contract</a>
+            <a class="dropdown-item" href="#quizzes">Quizzes</a>
+            <a class="dropdown-item" href="#responses">Responses</a>
+            <a class="dropdown-item" href="#midterm-and-final">Midterm and Final</a>
+            <a class="dropdown-item" href="#midtermfinal-alternative-essay">Midterm/Final Alternative: Essay</a>
+            <a class="dropdown-item" href="#creative-projects">Creative Projects</a>
+          </div>
+        </div>
+      </nav>
+      {% endif %}
+    </div> <!-- nav wrapper -->
+    {% if x %}
+    <hr>
+    {% else %}
   </div>
 
   <div class="col-8 border-left px-5">
-
+    {% endif %}
     <h4 id="grading-contract">Grading Contract</h4>
     <p>Grading and assessments in this course will be unorthodox. We will be following a form of <strong>specification grading</strong>, in which all assignments and assessments (including quizzes) are graded on a <strong>satisfactory or unsatisfactory</strong> basis (except for the midterm and final, on which see below). Each assignment and assessment will have an explicit set of guidelines and criteria for what will be considered “satisfactory.” Your semester grade, then, will be based on the number and type of satisfactory assignments and assessments completed. In other words, <strong>you will be in control of your semester grade</strong> — you decide the grade that you want and commit as much time and energy towards that grade as you desire.</p>
 
@@ -197,9 +223,9 @@
     </ul>
 
     <p>The only hard deadline is that all creative projects must be submitted <strong>by 11:59pm on ???</strong>.</p>
-
+    {% if not x %}
   </div> <!-- content div -->
 
 </div> <!-- row div for grid -->
-
+{% endif %}
 {% endblock %}

@@ -1,10 +1,13 @@
 {% extends 'clas199/page.html' %}
 {% block content %}
 
+{% if not x %}
 <div class="row">
 
   <div class="col-4">
-    <div {% if not x %}class="sticky-top" {% endif %} style="top:65px;">
+    {% endif %}
+    <div class="sticky-top" style="top:65px;">
+      {% if not x %}
       <nav id="navbar-example3" class="nav nav-pills flex-column text-right">
         <a class="nav-link" href="#write-a-poem">Write a Poem</a>
         <a class="nav-link" href="#artistic-rendering">Artistic Rendering</a>
@@ -18,11 +21,40 @@
         <a class="nav-link" href="#meme-or-tiktok">Meme or Tiktok</a>
         <a class="nav-link" href="#aita">AITA?</a>
       </nav>
-    </div>
+      {% else %}
+      <!-- mobile -->
+      <nav class="nav">
+        <div class="dropdown">
+
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Creative Project Options
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+            <a class="dropdown-item" href="#write-a-poem">Write a Poem</a>
+            <a class="dropdown-item" href="#artistic-rendering">Artistic Rendering</a>
+            <a class="dropdown-item" href="#eidolon-pitch"><em>Eidolon</em> Pitch</a>
+            <a class="dropdown-item" href="#selfie-and-object-analysis">Selfie and Object Analysis</a>
+            <a class="dropdown-item" href="#podcast">Podcast</a>
+            <a class="dropdown-item" href="#video">Video</a>
+            <a class="dropdown-item" href="#create-a-spotify-playlist">Create a Spotify Playlist</a>
+            <a class="dropdown-item" href="#livetweet-a-reading">Livetweet a Reading</a>
+            <a class="dropdown-item" href="#complete-the-fragments-of-sappho">Complete the Fragments of Sappho</a>
+            <a class="dropdown-item" href="#meme-or-tiktok">Meme or Tiktok</a>
+            <a class="dropdown-item" href="#aita">AITA?</a>
+          </div>
+        </div>
+      </nav>
+      {% endif %}
+    </div> <!-- nav wrapper -->
+    {% if x %}
+    <hr>
+    {% else %}
   </div>
 
-  <div class="col-8 border-left px-5">
 
+  <div class="col-8 border-left px-5">
+    {% endif %}
     <h4 id="write-a-poem">Creative Project 1: Write a Poem.</h4>
 
     <p><a href="https://docs.google.com/document/d/1XaLN8h7QFFfnXFIGMPFI5OPM5bMVtMElwwgaKN1KHEs/edit?usp=sharing">Review this set of four poems from Greek and Latin poets on themes of love, sex, and gender</a>. Your goal in this creative project is to choose one author and <strong>write a poem of 30-40 lines about gender or sexuality in their style, capturing their essence by using similar diction, poetic structure, and themes; also, write a short (4-5 sentence) blurb on your process -- how did you go about capturing the author&#39;s essence?</strong> The poem’s meter is of your own choosing (even free verse!). The topic of the poem can be personal, drawn from your own life, or more generalized — you can create your own persona! You may also choose a poem or a selection of verse from another work or author that we&#39;ve considered throughout the semester, but I recommend that you run your choice by me first before attempting your own poem.</p>
@@ -285,9 +317,9 @@
     <p>TBD</p>
 
 
-
+    {% if not x %}
   </div> <!-- content div -->
 
 </div> <!-- row div for grid -->
-
+{% endif %}
 {% endblock %}
