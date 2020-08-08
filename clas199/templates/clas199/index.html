@@ -1,16 +1,16 @@
 {% extends 'clas199/base.html' %}
 {% block body_block %}
+{% with x=request.user_agent.is_mobile %}
 
 <div class="bg-light">
 
   <h1 class="text-center pt-2">{{ department }} {{ course_number }}<br>{{ course_title }}</h1>
 
-
-
   <hr>
 
-
   <h3 class="text-center text-uppercase pb-2">Next deadlines</h3>
+
+  {% if not x %}
   <dl class="mb-0 row">
     <dt class="col-sm-5 text-right">Thursday, 9/3</dt>
     <dd class="col-sm-7">
@@ -40,12 +40,45 @@
   </dl>
 
   <p class="pb-2 text-center font-italic">(<a href="{% url 'clas199:schedule' %}">click for full schedule</a>)</p>
+
+  {% else %}
+  <!-- mobile -->
+
+  <h5 class="text-center">Thursday, 9/3</h5>
+  <ul>
+    <li>Read the <a href="{% url 'clas199:policies' %}">course policies</a></li>
+    <li>Read the <a href="{% url 'clas199:grading' %}">grading contract</a></li>
+    <li>Fill out this <a href="#">student information form</a></li>
+    <li>Read <a href="https://drive.google.com/file/d/11imJVwxHFgirRM0qkc0F112fUI2ppeTQ/view?usp=sharing">Ormand 1-24</a></li>
+  </ul>
+
+  <h5 class="text-center">Tuesday, 9/8</h5>
+  <ul>
+    <li>Complete <a href="#">Quiz #1 (Introduction)</a></li>
+    <li>Think about breakout room prompt for Week 2</li>
+    <li>Read <a href="https://drive.google.com/file/d/11tpFBAbLnUGhK94NrIbwUqZkUqZNdv6w/view?usp=sharing">Ormand 55-72</a></li>
+    <li>Read <a href="https://drive.google.com/file/d/11x7hf6mV8S1i5Yfrbb0PI49rA-Bk3INL/view?usp=sharing">Robson 3-35</a></li>
+    <li>Read <a href="https://drive.google.com/file/d/1_ExjMvd3RdSnCLDcrPgawoeV1ru40X4V/view?usp=sharing">Robson 36-66</a></li>
+  </ul>
+
+  <h5 class="text-center">Friday, 9/11</h5>
+  <ul>
+    <li>Submit Response #1 (by 11:59pm)</li>
+  </ul>
+
+
+  <p class="pb-2 text-center font-italic">(<a href="{% url 'clas199:schedule' %}">click for full schedule</a>)</p>
+
+  {% endif %}
+
 </div>
 
+{% if not x %}
 <div class="row">
 
   <div class="col-sm-6 border-right text-right">
-    <h2>Course Info</h2>
+    {% endif %}
+    <h2 {% if x %}class="text-center" {% endif %}>Course Info</h2>
     <ul class="list-unstyled">
       <li><strong>Meeting Time</strong>: TR 1:15-2:30pm</li>
       <li><strong>Meeting Place</strong>: Zoom (see email)</li>
@@ -55,15 +88,23 @@
       <li><strong>Email</strong>: DLibatiq [at] holycross.edu</li>
       <li><strong>Website</strong>: <a href="https://libatique.info">Click here</a>.</li>
     </ul>
+
+    {% if not x %}
   </div>
   <div class="col-sm-6 pr-5">
-    <h2>Course Description</h2>
+    {% else %}
+    <hr>
+    {% endif %}
+    <h2 {% if x %}class="text-center" {% endif %}>Course Description</h2>
     <p>In this course, we will analyze and engage with ancient Greco-Roman works of literature and art to reconstruct how the Greeks and Romans conceptualized gender and sexuality. We will use these investigations as a way to analyze our own modern conceptions of gender and sexuality and understand how issues of legality and morality are necessarily renegotiated from culture to culture and time period to time period.</p>
+    {% if not x %}
   </div>
 
 </div>
-
+{% endif %}
 <hr>
+
+{% if not x %}
 <div class="row">
 
   <div class="col-sm-2">
@@ -71,7 +112,7 @@
   </div>
   <div class="col-sm-8">
 
-
+    {% endif %}
     <h2 class="text-center">Course Objectives</h2>
     <ul>
       <li>to define and demarcate the boundaries of “sex,” “gender,” and “sexuality”</li>
@@ -79,9 +120,13 @@
       <li>to compare Greek constructions of gender and sexuality with Roman ones</li>
       <li>to compare ancient constructions of gender and sexuality with modern ones</li>
     </ul>
+
+    {% if not x %}
   </div>
   <div class="col-sm-2">
     <p></p>
   </div>
 </div>
+{% endif %}
+{% endwith %}
 {% endblock %}
