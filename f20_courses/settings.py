@@ -26,7 +26,8 @@ SECRET_KEY = '5mqta=9t@f$tip7tabw*d-x2y*h4hbdf_h%gwt1e_g1)z9ttpz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.libatique.app',]
+ALLOWED_HOSTS = ['www.libatique.app',
+                    '127.0.0.1',]
 
 
 # Application definition
