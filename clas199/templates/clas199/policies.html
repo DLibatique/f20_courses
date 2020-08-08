@@ -4,7 +4,7 @@
 <div class="row">
 
   <div class="col-4">
-    <div {%if request.user_agent.is_mobile %}class="" {% else %}class="sticky-top" {% endif %} style="top:65px;">
+    <div {% if not x %}class="sticky-top" {% endif %} style="top:65px;">
       <nav id="navbar-example3" class="nav nav-pills flex-column text-right">
         <a class="nav-link" href="#online-format-and-the-pandemic">Online Format and the Pandemic</a>
         <a class="nav-link" href="#zoom-suggestions">Zoom Suggestions</a>
