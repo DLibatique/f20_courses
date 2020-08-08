@@ -1,10 +1,13 @@
 {% extends 'clas199/page.html' %}
 {% block content %}
 
+{% if not x %}
 <div class="row">
 
   <div class="col-4">
-    <div {% if not x %}class="sticky-top" {% endif %} style="top:65px;">
+    {% endif %}
+    <div class="sticky-top" style="top:65px;">
+      {% if not x %}
       <nav id="navbar-example3" class="nav nav-pills flex-column text-right">
         <a class="nav-link" href="#online-format-and-the-pandemic">Online Format and the Pandemic</a>
         <a class="nav-link" href="#zoom-suggestions">Zoom Suggestions</a>
@@ -17,11 +20,40 @@
         <a class="nav-link" href="#external-resources">Exernal Resources</a>
         <a class="nav-link" href="#mandated-reporter">Mandated Reporter</a>
       </nav>
-    </div>
+      {% else %}
+      <!-- mobile -->
+      <nav class="nav">
+        <div class="dropdown">
+
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Policy Section
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
+            <a class="dropdown-item" href="#online-format-and-the-pandemic">Online Format and the Pandemic</a>
+            <a class="dropdown-item" href="#zoom-suggestions">Zoom Suggestions</a>
+            <a class="dropdown-item" href="#academic-conduct">Academic Conduct</a>
+            <a class="dropdown-item" href="#student-hours">Student Hours</a>
+            <a class="dropdown-item" href="#gender-expression-and-identity">Gender Expression and Identity</a>
+            <a class="dropdown-item" href="#diversity-inclusion-and-respect">Diversity, Inclusion, and Respect</a>
+            <a class="dropdown-item" href="#content-warnings">Content Warnings</a>
+            <a class="dropdown-item" href="#accessibility">Accessibility</a>
+            <a class="dropdown-item" href="#external-resources">Exernal Resources</a>
+            <a class="dropdown-item" href="#mandated-reporter">Mandated Reporter</a>
+          </div>
+        </div>
+      </nav>
+      {% endif %}
+    </div> <!-- nav wrapper -->
+    {% if not x %}
   </div>
+  {% else %}
+  <hr>
+  {% endif %}
 
+  {% if not x %}
   <div class="col-8 border-left px-5">
-
+    {% endif %}
     <h4 id="online-format-and-the-pandemic">Online Format and the Pandemic</h4>
     <p>Due to the coronavirus pandemic, our plan for the semester will be to use an online format. We will meet synchronously via Zoom at our registrar-appointed meeting times (TR 1:15-2:30pm Eastern). If you anticipate any difficulties or obstacles in meeting at our prescribed times due to a time zone difference or other considerations like taking care of family or working a job, please contact me so that we can work out a plan!</p>
 
@@ -96,8 +128,9 @@
 
     <p>Again, I want to stress that I would like to make our classroom and your assignments spaces where you can share your personal experiences and speak your minds, but please keep these disclosures in mind on assignments like personal reflection responses.</p>
 
+    {% if not x %}
   </div> <!-- content div -->
 
 </div> <!-- row div for grid -->
-
+{% endif %}
 {% endblock %}
