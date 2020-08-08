@@ -58,7 +58,7 @@ def upload_portal(request):
 
     course_context['page_title'] = 'Upload Portal'
 
-    return render(request, 'clas199/page.html', context=course_context)
+    return render(request, 'clas199/upload_portal.html', context=course_context)
 
 def essay(request):
 
