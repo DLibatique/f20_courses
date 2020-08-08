@@ -1,11 +1,11 @@
 {% extends 'clas199/page.html' %}
 {% block content %}
 
+{% if not x %}
 <div class="row">
 
-
   <div class="col-sm-6 border-right">
-
+    {% endif %}
 
     <h2 class="text-center">Academic Resources</h2>
     <ul>
@@ -15,46 +15,53 @@
       <li><a title="Link" href="https://www.holycross.edu/support-and-resources/holy-cross-libraries" target="_blank" rel="noopener">Library</a></li>
       <li><a title="Link" href="https://www.holycross.edu/health-wellness-and-access/office-accessibility-services" target="_blank" rel="noopener">Office of Accessibility Services</a></li>
     </ul>
+
+    {% if not x %}
   </div>
 
   <div class="col-sm-6">
-
-
+    {% else %}
+    <hr>
+    {% endif %}
     <h2 class="text-center">Student Support Resources</h2>
     <ul>
       <li><a href="https://www.holycross.edu/health-wellness-and-access/counseling-center">Counseling Center</a></li>
       <li><a href="https://www.holycross.edu/campus-life/diversity-and-inclusion">Office of Diversity, Inclusion and Equity</a></li>
       <li><a href="https://www.holycross.edu/diversity-and-inclusion/office-multicultural-education">Office of Multicultural Education</a></li>
     </ul>
+    {% if not x %}
   </div>
 
 </div>
+{% endif %}
 <hr>
-
+{% if not x %}
 <div class="row">
 
   <div class="col-sm-6 border-right">
-
-
+    {% endif %}
     <h2 class="text-center">Primary Textbook</h2>
     <ul>
       <li>Ormand, Kirk. 2018. <a href="https://www.amazon.com/dp/1477311459/ref=cm_sw_em_r_mt_dp_U_efM.Db423NXT8"><em>Controlling Desires: Sexuality in Ancient Greece and Rome, Revised Edition.</em></a> University of Texas Press. ISBN-13: 978-1477311455; ISBN-10: 1477311459.</li>
     </ul>
+    {% if not x %}
   </div>
 
   <div class="col-sm-6">
-
-
-
+    {% else %}
+    <hr>
+    {% endif %}
     <h2 class="text-center">Other Important Books</h2>
     <ul>
       <li>Robson, James. 2013. <em>Sex and Sexuality in Classical Athens</em>. Edinburgh.</li>
       <li>Skinner, Marilyn. 2013. <a href="https://holycross.idm.oclc.org/login?auth=cas&url=https://search-ebscohost-com.holycross.idm.oclc.org/login.aspx?direct=true&db=cat06787a&AN=chc.b2371517&site=eds-live&scope=site"><em>Sexuality in Greek and Roman Culture</em></a>. Hoboken.</li>
       <li>Williams, Craig. 1999. <a href="https://holycross.idm.oclc.org/login?auth=cas&url=http://hdl.handle.net/2027/heb.01472"><em>Roman Homosexuality.</em></a> Oxford and New York.</li>
     </ul>
+    {% if not x %}
   </div>
-</div>
 
+</div>
+{% endif %}
 <hr>
 
 <p>The cost of books should never be a deterrent to participation in a class that you want to take. If you have trouble affording our course textbook, please let me know, and I will work to get you an affordable copy through the resources of the College.</p>
@@ -63,25 +70,26 @@
 
 <h2 class="text-center">Electronic Course Resources</h2>
 
+{% if not x %}
 <dl class="row">
-  <dt class="col-sm-3 text-right"><a href="#">LibGuide</a></dt>
-  <dd class="col-sm-9">Our awesome Classics librarian, Mrs. Jennifer Whelan MLIS, has put together a page of resources to help us navigate the various types of sources and information that we’ll be dealing with in this course. Check it out!</dd>
+  <dt class="col-sm-3 text-right" {% else %}<h3{% endif %}><a href="#">LibGuide</a>{% if not x %}</dt>{% else %}</h3>{% endif %}
+  <{% if not x %}dd class="col-sm-9" {% else%}p{% endif %}>Our awesome Classics librarian, Mrs. Jennifer Whelan MLIS, has put together a page of resources to help us navigate the various types of sources and information that we’ll be dealing with in this course. Check it out!{% if not x %}</dd>{% else %}</p>{% endif %}
 
-  <dt class="col-sm-3 text-right"><a href="https://alisoninnes.files.wordpress.com/2017/10/cornell-notes-quick-dirty-guide.pdf">Cornell Notes</a></dt>
-  <dd class="col-sm-9">A note-taking method suggested by <a href="https://twitter.com/alisoninnes">Alison Innes</a> that may help you organize your notes and thoughts throughout lecture more easily.
-  </dd>
+    <{% if not x %}dt class="col-sm-3 text-right" {% else %}h3{% endif %}><a href="https://alisoninnes.files.wordpress.com/2017/10/cornell-notes-quick-dirty-guide.pdf">Cornell Notes</a>{% if not x %}</dt>{% else %}</h3>{% endif %}
+      <{% if not x %}dd class="col-sm-9" {% else%}p{% endif %}>A note-taking method suggested by <a href="https://twitter.com/alisoninnes">Alison Innes</a> that may help you organize your notes and thoughts throughout lecture more easily.
+        {% if not x %}</dd>{% else %}</p>{% endif %}
 
-  <dt class="col-sm-3 text-right"><a href="https://eidolon.pub">Eidolon</a></dt>
-  <dd class="col-sm-9">“Classics without Fragility.” An online journal with modern takes on Classical texts and society.</dd>
+        <{% if not x %}dt class="col-sm-3 text-right" {% else %}h3{% endif %}><a href="https://eidolon.pub">Eidolon</a>{% if not x %}</dt>{% else %}</h3>{% endif %}
+          <{% if not x %}dd class="col-sm-9" {% else%}p{% endif %}>“Classics without Fragility.” An online journal with modern takes on Classical texts and society.{% if not x %}</dd>{% else %}</p>{% endif %}
 
-  <dt class="col-sm-3 text-right"><a href="https://thesportula.wordpress.com/">The Sportula</a></dt>
-  <dd class="col-sm-9">Microgrants for Classics undergrads. If you’re struggling money-wise and need help for anything relating to your studies (buying books, paying for food, studying abroad, etc.), the Sportula can help.</dd>
+            <{% if not x %}dt class="col-sm-3 text-right" {% else %}h3{% endif %}><a href="https://thesportula.wordpress.com/">The Sportula</a>{% if not x %}</dt>{% else %}</h3>{% endif %}
+              <{% if not x %}dd class="col-sm-9" {% else%}p{% endif %}>Microgrants for Classics undergrads. If you’re struggling money-wise and need help for anything relating to your studies (buying books, paying for food, studying abroad, etc.), the Sportula can help.{% if not x %}</dd>{% else %}</p>{% endif %}
 
-  <dt class="col-sm-3 text-right"><a href="https://diotima-doctafemina.org/">Diotima</a></dt>
-  <dd class="col-sm-9">Resources for studying women in the ancient world.</dd>
+                <{% if not x %}dt class="col-sm-3 text-right" {% else %}h3{% endif %}><a href="https://diotima-doctafemina.org/">Diotima</a>{% if not x %}</dt>{% else %}</h3>{% endif %}
+                  <{% if not x %}dd class="col-sm-9" {% else%}p{% endif %}>Resources for studying women in the ancient world.{% if not x %}</dd>{% else %}</p>{% endif %}
 
-
+                    {% if not x %}
 </dl>
-
+{% endif %}
 
 {% endblock %}
