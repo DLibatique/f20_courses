@@ -49,8 +49,7 @@
           {% url 'clas199:schedule' as schedule %}
           <li class="nav-item"><a href="{% url 'clas199:schedule' %}" {% if request.get_full_path == schedule %}class='nav-link active' {% else %}class='nav-link' {% endif %}>Schedule</a></li>
 
-          {% url 'clas199:upload_portal' as upload_portal %}
-          <li class="nav-item"><a href="{% url 'clas199:upload_portal' %}" {% if request.get_full_path == upload_portal %}class='nav-link active' {% else %}class='nav-link' {% endif %}>Upload Portal</a></li>
+          <li class="nav-item"><a href="https://forms.gle/23WWrMYuEHku4S2R8" class='nav-link'>Upload Portal</a></li>
 
         </ul>
 

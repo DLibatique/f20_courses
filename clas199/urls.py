@@ -10,7 +10,6 @@ urlpatterns = [
     path('grading', views.grading, name="grading"),
     path('creative_projects', views.creative_projects, name="creative_projects"),
     path('schedule', views.schedule, name="schedule"),
-    path('upload_portal', views.upload_portal, name="upload_portal"),
     path('essay', views.essay, name="essay"),
     path('citations', views.citations, name="citations"),
 ]

@@ -54,12 +54,6 @@ def schedule(request):
 
     return render(request, 'clas199/schedule.html', context=course_context)
 
-def upload_portal(request):
-
-    course_context['page_title'] = 'Upload Portal'
-
-    return render(request, 'clas199/upload_portal.html', context=course_context)
-
 def essay(request):
 
     course_context['page_title'] = 'Essay Tips'
