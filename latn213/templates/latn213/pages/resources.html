@@ -1,6 +1,28 @@
 {% extends 'latn213/page.html' %}
 {% block content %}
 
+<h2 class="text-center">Electronic Course Resources</h2>
+
+{% if not x %}
+<dl class="row">
+  <dt class="col-sm-3 text-right" {% else %}<h3{% endif %}><a href="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0139">Pliny on Perseus</a>{% if not x %}</dt>{% else %}</h3>{% endif %}
+  <{% if not x %}dd class="col-sm-9" {% else%}p{% endif %}>An important web version of Pliny's text that can help you with vocabulary, parsing, and word frequencies.{% if not x %}</dd>{% else %}</p>{% endif %}
+
+    <{% if not x %}dt class="col-sm-3 text-right" {% else %}h3{% endif %}><a href="https://logeion.uchicago.edu/lexidium">Logeion: Lexidium</a>{% if not x %}</dt>{% else %}</h3>{% endif %}
+      <{% if not x %}dd class="col-sm-9" {% else%}p{% endif %}>An online version of the Lewis and Short Latin Dictionary.{% if not x %}</dd>{% else %}</p>{% endif %}
+
+        <{% if not x %}dt class="col-sm-3 text-right" {% else %}h3{% endif %}><a href="http://folio2.furman.edu/lewis-short/">Furman: Lewis and Short</a>{% if not x %}</dt>{% else %}</h3>{% endif %}
+          <{% if not x %}dd class="col-sm-9" {% else%}p{% endif %}>Furman University's version of the Lewis and Short Latin Dictionary.{% if not x %}</dd>{% else %}</p>{% endif %}
+
+            <{% if not x %}dt class="col-sm-3 text-right" {% else %}h3{% endif %}><a href="http://archives.nd.edu/words.html">Whitaker's Words</a>{% if not x %}</dt>{% else %}</h3>{% endif %}
+              <{% if not x %}dd class="col-sm-9" {% else%}p{% endif %}>Resource to help with parsing and to translate from English to Latin.{% if not x %}</dd>{% else %}</p>{% endif %}
+
+                {% if not x %}
+</dl>
+{% endif %}
+
+<hr>
+
 {% if not x %}
 <div class="row">
 
@@ -65,25 +87,5 @@
 <p>The cost of books should never be a deterrent to participation in a class that you want to take. If you have trouble affording our course textbook, please let me know, and I will work to get you an affordable copy through the resources of the College.</p>
 
 <hr>
-
-<h2 class="text-center">Electronic Course Resources</h2>
-
-{% if not x %}
-<dl class="row">
-  <dt class="col-sm-3 text-right" {% else %}<h3{% endif %}><a href="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0139">Pliny on Perseus</a>{% if not x %}</dt>{% else %}</h3>{% endif %}
-  <{% if not x %}dd class="col-sm-9" {% else%}p{% endif %}>An important web version of Pliny's text that can help you with vocabulary, parsing, and word frequencies.{% if not x %}</dd>{% else %}</p>{% endif %}
-
-    <{% if not x %}dt class="col-sm-3 text-right" {% else %}h3{% endif %}><a href="https://logeion.uchicago.edu/lexidium">Logeion: Lexidium</a>{% if not x %}</dt>{% else %}</h3>{% endif %}
-      <{% if not x %}dd class="col-sm-9" {% else%}p{% endif %}>An online version of the Lewis and Short Latin Dictionary.{% if not x %}</dd>{% else %}</p>{% endif %}
-
-        <{% if not x %}dt class="col-sm-3 text-right" {% else %}h3{% endif %}><a href="http://folio2.furman.edu/lewis-short/">Furman: Lewis and Short</a>{% if not x %}</dt>{% else %}</h3>{% endif %}
-          <{% if not x %}dd class="col-sm-9" {% else%}p{% endif %}>Furman University's version of the Lewis and Short Latin Dictionary.{% if not x %}</dd>{% else %}</p>{% endif %}
-
-            <{% if not x %}dt class="col-sm-3 text-right" {% else %}h3{% endif %}><a href="http://archives.nd.edu/words.html">Whitaker's Words</a>{% if not x %}</dt>{% else %}</h3>{% endif %}
-              <{% if not x %}dd class="col-sm-9" {% else%}p{% endif %}>Resource to help with parsing and to translate from English to Latin.{% if not x %}</dd>{% else %}</p>{% endif %}
-
-                {% if not x %}
-</dl>
-{% endif %}
 
 {% endblock %}
