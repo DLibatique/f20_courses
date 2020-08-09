@@ -9,4 +9,4 @@ course_context = {
 # Create your views here.
 def index(request):
 
-    return render(request, 'index.html', context=course_context)
+    return render(request, 'latn213/index.html', context=course_context)

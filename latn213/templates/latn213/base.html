@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ page_title }} · LATN 213</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+  <style>
+    h4,
+    h5 {
+      padding-top: 65px;
+      margin-top: -65px;
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target=".nav" data-offset="5">
+  {% with x=request.user_agent.is_mobile %}
+  <div class="container">
+
+    <nav class='navbar navbar-expand-lg navbar-light bg-info sticky-top'>
+
+      <a class='navbar-brand' href="{% url 'clas199:index' %}">CLAS 199</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id='navbarSupportedContent'>
+
+        <ul class="navbar-nav ml-auto">
+
+          {% url 'clas199:index' as index %}
+          <li class="nav-item"><a href="{% url 'clas199:index' %}" {% if request.get_full_path == index %}class='nav-link active' {% else %}class='nav-link' {% endif %}>Home</a></li>
+
+          {% url 'clas199:resources' as resources %}
+          <li class="nav-item"><a href="{% url 'clas199:resources' %}" {% if request.get_full_path == resources %}class='nav-link active' {% else %}class='nav-link' {% endif %}>Resources</a></li>
+
+          {% url 'clas199:policies' as policies %}
+          <li class="nav-item"><a href="{% url 'clas199:policies' %}" {% if request.get_full_path == policies %}class='nav-link active' {% else %}class='nav-link' {% endif %}>Policies</a></li>
+
+          {% url 'clas199:grading' as grading %}
+          <li class="nav-item"><a href="{% url 'clas199:grading' %}" {% if request.get_full_path == grading %}class='nav-link active' {% else %}class='nav-link' {% endif %}>Grading</a></li>
+
+          {% url 'clas199:creative_projects' as creative_projects %}
+          <li class="nav-item"><a href="{% url 'clas199:creative_projects' %}" {% if request.get_full_path == creative_projects %}class='nav-link active' {% else %}class='nav-link' {% endif %}>Creative Projects</a></li>
+
+          {% url 'clas199:schedule' as schedule %}
+          <li class="nav-item"><a href="{% url 'clas199:schedule' %}" {% if request.get_full_path == schedule %}class='nav-link active' {% else %}class='nav-link' {% endif %}>Schedule</a></li>
+
+          <li class="nav-item"><a href="https://forms.gle/23WWrMYuEHku4S2R8" class='nav-link'>Upload Portal</a></li>
+
+        </ul>
+
+      </div>
+
+    </nav>
+
+
+    {% block body_block %}
+    {% endblock %}
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+  {% endwith %}
+</body>
+
+</html>
