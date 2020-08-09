@@ -28,40 +28,40 @@ def resources(request):
 
     course_context['page_title'] = 'Resources'
 
-    return render(request, 'clas199/resources.html', context=course_context)
+    return render(request, 'clas199/pages/resources.html', context=course_context)
 
 def policies(request):
 
     course_context['page_title'] = 'Policies'
 
-    return render(request, 'clas199/policies.html', context=course_context)
+    return render(request, 'clas199/pages/policies.html', context=course_context)
 
 def grading(request):
 
     course_context['page_title'] = 'Grading'
 
-    return render(request, 'clas199/grading.html', context=course_context)
+    return render(request, 'clas199/pages/grading.html', context=course_context)
 
 def creative_projects(request):
 
     course_context['page_title'] = 'Creative Projects'
 
-    return render(request, 'clas199/creative_projects.html', context=course_context)
+    return render(request, 'clas199/pages/creative_projects.html', context=course_context)
 
 def schedule(request):
 
     course_context['page_title'] = 'Schedule'
 
-    return render(request, 'clas199/schedule.html', context=course_context)
+    return render(request, 'clas199/pages/schedule.html', context=course_context)
 
 def essay(request):
 
     course_context['page_title'] = 'Essay Tips'
 
-    return render(request, 'clas199/essay.html', context=course_context)
+    return render(request, 'clas199/pages/essay.html', context=course_context)
 
 def citations(request):
 
     course_context['page_title'] = 'Citation Examples'
 
-    return render(request, 'clas199/citation.html', context=course_context)
+    return render(request, 'clas199/pages/citation.html', context=course_context)
