@@ -1,0 +1,89 @@
+{% extends 'latn213/page.html' %}
+{% block content %}
+
+{% if not x %}
+<div class="row">
+
+  <div class="col-sm-6 border-right">
+    {% endif %}
+
+    <h2 class="text-center">Academic Resources</h2>
+    <ul>
+      <li><a title="Link" href="https://www.holycross.edu/support-and-resources/academic-services-and-learning-resources" target="_blank" rel="noopener">Academic Services and Learning Resources</a></li>
+      <li><a title="Link" href="https://www.holycross.edu/academics/support-and-resources/center-for-writing" target="_blank" rel="noopener">Center for Writing</a> [<a title="Link" href="https://www.holycross.edu/academics/support-and-resources/center-for-writing/writers-workshop" target="_blank" rel="noopener">Writers Workshop</a>]</li>
+      <li><a title="Link" href="https://www.holycross.edu/mentored-learning/class-deans" target="_blank" rel="noopener">Class Deans</a></li>
+      <li><a title="Link" href="https://www.holycross.edu/support-and-resources/holy-cross-libraries" target="_blank" rel="noopener">Library</a></li>
+      <li><a title="Link" href="https://www.holycross.edu/health-wellness-and-access/office-accessibility-services" target="_blank" rel="noopener">Office of Accessibility Services</a></li>
+    </ul>
+
+    {% if not x %}
+  </div>
+
+  <div class="col-sm-6">
+    {% else %}
+    <hr>
+    {% endif %}
+    <h2 class="text-center">Student Support Resources</h2>
+    <ul>
+      <li><a href="https://www.holycross.edu/health-wellness-and-access/counseling-center">Counseling Center</a></li>
+      <li><a href="https://www.holycross.edu/campus-life/diversity-and-inclusion">Office of Diversity, Inclusion and Equity</a></li>
+      <li><a href="https://www.holycross.edu/diversity-and-inclusion/office-multicultural-education">Office of Multicultural Education</a></li>
+    </ul>
+    {% if not x %}
+  </div>
+
+</div>
+{% endif %}
+<hr>
+{% if not x %}
+<div class="row">
+
+  <div class="col-sm-6 border-right">
+    {% endif %}
+    <h2 class="text-center">Primary Textbook</h2>
+    <ul>
+      <li>Shelton, Jo-Ann. 2016. <a href="https://www.amazon.com/Younger-Selected-Letters-Jo-Ann-Shelton/dp/0865168407"><em>Pliny the Younger: Selected Letters.</em></a> Mundelein, IL: Bolchazy-Carducci Publishers. ISBN-13: 978-0865168404; ISBN-10: 0865168407.</li>
+    </ul>
+    {% if not x %}
+  </div>
+
+  <div class="col-sm-6">
+    {% else %}
+    <hr>
+    {% endif %}
+    <h2 class="text-center">Other Important Books</h2>
+    <ul>
+      <li>TBD</li>
+    </ul>
+    {% if not x %}
+  </div>
+
+</div>
+{% endif %}
+<hr>
+
+<p>The cost of books should never be a deterrent to participation in a class that you want to take. If you have trouble affording our course textbook, please let me know, and I will work to get you an affordable copy through the resources of the College.</p>
+
+<hr>
+
+<h2 class="text-center">Electronic Course Resources</h2>
+
+{% if not x %}
+<dl class="row">
+  <dt class="col-sm-3 text-right" {% else %}<h3{% endif %}><a href="http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3atext%3a1999.02.0139">Pliny on Perseus</a>{% if not x %}</dt>{% else %}</h3>{% endif %}
+  <{% if not x %}dd class="col-sm-9" {% else%}p{% endif %}>An important web version of Pliny's text that can help you with vocabulary, parsing, and word frequencies.{% if not x %}</dd>{% else %}</p>{% endif %}
+
+    <{% if not x %}dt class="col-sm-3 text-right" {% else %}h3{% endif %}><a href="https://logeion.uchicago.edu/lexidium">Logeion: Lexidium</a>{% if not x %}</dt>{% else %}</h3>{% endif %}
+      <{% if not x %}dd class="col-sm-9" {% else%}p{% endif %}>An online version of the Lewis and Short Latin Dictionary.{% if not x %}</dd>{% else %}</p>{% endif %}
+
+        <{% if not x %}dt class="col-sm-3 text-right" {% else %}h3{% endif %}><a href="http://folio2.furman.edu/lewis-short/">Furman: Lewis and Short</a>{% if not x %}</dt>{% else %}</h3>{% endif %}
+          <{% if not x %}dd class="col-sm-9" {% else%}p{% endif %}>Furman University's version of the Lewis and Short Latin Dictionary.{% if not x %}</dd>{% else %}</p>{% endif %}
+
+            <{% if not x %}dt class="col-sm-3 text-right" {% else %}h3{% endif %}><a href="http://archives.nd.edu/words.html">Whitaker's Words</a>{% if not x %}</dt>{% else %}</h3>{% endif %}
+              <{% if not x %}dd class="col-sm-9" {% else%}p{% endif %}>Resource to help with parsing and to translate from English to Latin.{% if not x %}</dd>{% else %}</p>{% endif %}
+
+                {% if not x %}
+</dl>
+{% endif %}
+
+{% endblock %}

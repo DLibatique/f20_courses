@@ -1,4 +1,4 @@
-{% extends 'clas199/base.html' %}
+{% extends 'latn213/base.html' %}
 {% block body_block %}
 
 <div class="bg-light">
@@ -11,64 +11,34 @@
 
   {% if not x %}
   <dl class="mb-0 row">
-    <dt class="col-sm-5 text-right">Thursday, 9/3</dt>
+    <dt class="col-sm-5 text-right">Friday, 9/4</dt>
     <dd class="col-sm-7">
+      {% else %}
+      <h5 class="text-center">Friday, 9/4</h5>
+      {% endif %}
       <ul>
-        <li>Read the <a href="{% url 'clas199:policies' %}">course policies</a></li>
-        <li>Read the <a href="{% url 'clas199:grading' %}">grading contract</a></li>
+        <li>Read the <a href="{% url 'latn213:policies' %}">course policies</a></li>
+        <li>Read the <a href="{% url 'latn213:grading' %}">grading scheme</a></li>
+        <li>Read the <a href="{% url 'latn213:assignments' %}">assignment descriptions</a></li>
         <li>Fill out this <a href="#">student information form</a></li>
-        <li>Read <a href="https://drive.google.com/file/d/11imJVwxHFgirRM0qkc0F112fUI2ppeTQ/view?usp=sharing">Ormand 1-24</a></li>
+        <li>Complete this <a href="#">spot check</a></li>
       </ul>
+      {% if not x %}
     </dd>
-    <dt class="col-sm-5 text-right">Tuesday, 9/8</dt>
+    <dt class="col-sm-5 text-right">Monday, 9/7</dt>
     <dd class="col-sm-7">
+      {% else %}
+      <h5 class="text-center">Monday, 9/7</h5>
+      {% endif %}
       <ul>
-        <li>Complete <a href="#">Quiz #1 (Introduction)</a></li>
-        <li>Think about breakout room prompt for Week 2</li>
-        <li>Read <a href="https://drive.google.com/file/d/11tpFBAbLnUGhK94NrIbwUqZkUqZNdv6w/view?usp=sharing">Ormand 55-72</a></li>
-        <li>Read <a href="https://drive.google.com/file/d/11x7hf6mV8S1i5Yfrbb0PI49rA-Bk3INL/view?usp=sharing">Robson 3-35</a></li>
-        <li>Read <a href="https://drive.google.com/file/d/1_ExjMvd3RdSnCLDcrPgawoeV1ru40X4V/view?usp=sharing">Robson 36-66</a></li>
+        <li>Work through <a href="#">Shelton 1</a></li>
       </ul>
-    </dd>
-    <dt class="col-sm-5 text-right">Friday, 9/11</dt>
-    <dd class="col-sm-7">
-      <ul>
-        <li>Submit Response #1 (by 11:59pm)</li>
-      </ul>
+      {% if not x %}
     </dd>
   </dl>
-
-  <p class="pb-2 text-center font-italic">(<a href="{% url 'clas199:schedule' %}">click for full schedule</a>)</p>
-
-  {% else %}
-  <!-- mobile -->
-
-  <h5 class="text-center">Thursday, 9/3</h5>
-  <ul>
-    <li>Read the <a href="{% url 'clas199:policies' %}">course policies</a></li>
-    <li>Read the <a href="{% url 'clas199:grading' %}">grading contract</a></li>
-    <li>Fill out this <a href="#">student information form</a></li>
-    <li>Read <a href="https://drive.google.com/file/d/11imJVwxHFgirRM0qkc0F112fUI2ppeTQ/view?usp=sharing">Ormand 1-24</a></li>
-  </ul>
-
-  <h5 class="text-center">Tuesday, 9/8</h5>
-  <ul>
-    <li>Complete <a href="#">Quiz #1 (Introduction)</a></li>
-    <li>Think about breakout room prompt for Week 2</li>
-    <li>Read <a href="https://drive.google.com/file/d/11tpFBAbLnUGhK94NrIbwUqZkUqZNdv6w/view?usp=sharing">Ormand 55-72</a></li>
-    <li>Read <a href="https://drive.google.com/file/d/11x7hf6mV8S1i5Yfrbb0PI49rA-Bk3INL/view?usp=sharing">Robson 3-35</a></li>
-    <li>Read <a href="https://drive.google.com/file/d/1_ExjMvd3RdSnCLDcrPgawoeV1ru40X4V/view?usp=sharing">Robson 36-66</a></li>
-  </ul>
-
-  <h5 class="text-center">Friday, 9/11</h5>
-  <ul>
-    <li>Submit Response #1 (by 11:59pm)</li>
-  </ul>
-
-
-  <p class="pb-2 text-center font-italic">(<a href="{% url 'clas199:schedule' %}">click for full schedule</a>)</p>
-
   {% endif %}
+
+  <p class="pb-2 text-center font-italic">(<a href="{% url 'latn213:schedule' %}">click for full schedule</a>)</p>
 
 </div>
 
@@ -79,7 +49,7 @@
     {% endif %}
     <h2 {% if x %}class="text-center" {% endif %}>Course Info</h2>
     <ul class="list-unstyled">
-      <li><strong>Meeting Time</strong>: TR 1:15-2:30pm</li>
+      <li><strong>Meeting Time</strong>: MWF 9:15-10:05am Eastern</li>
       <li><strong>Meeting Place</strong>: Zoom (see email)</li>
       <li><strong>Instructor</strong>: Prof. Daniel Libatique (he/him/his)</li>
       <li><strong>Office</strong>: Fenwick 410</li>
@@ -94,8 +64,13 @@
     {% else %}
     <hr>
     {% endif %}
-    <h2 {% if x %}class="text-center" {% endif %}>Course Description</h2>
-    <p>In this course, we will analyze and engage with ancient Greco-Roman works of literature and art to reconstruct how the Greeks and Romans conceptualized gender and sexuality. We will use these investigations as a way to analyze our own modern conceptions of gender and sexuality and understand how issues of legality and morality are necessarily renegotiated from culture to culture and time period to time period.</p>
+    <h2 {% if x %}class="text-center" {% endif %}>Course Objectives</h2>
+    <ul>
+      <li>build grammatical and syntactic knowledge of Latin</li>
+      <li>expand reading comprehension beyond surface-level translation</li>
+      <li>develop ability to read Latin at sight with the help of lexica and commentaries</li>
+      <li>refine Latin pronunciation and speaking skills</li>
+    </ul>
     {% if not x %}
   </div>
 
@@ -112,13 +87,9 @@
   <div class="col-sm-8">
 
     {% endif %}
-    <h2 class="text-center">Course Objectives</h2>
-    <ul>
-      <li>to define and demarcate the boundaries of “sex,” “gender,” and “sexuality”</li>
-      <li>to articulate how the Greeks and the Romans defined, performed, and policed gender and sexuality</li>
-      <li>to compare Greek constructions of gender and sexuality with Roman ones</li>
-      <li>to compare ancient constructions of gender and sexuality with modern ones</li>
-    </ul>
+
+    <h2 class="text-center">Course Description</h2>
+    <p>Intermediate Latin 1 builds on the grammatical and syntactic knowledge base that we began in the introductory sequence (LATN 101 and 102) through reading unaltered Latin texts and applying concepts and skills to the actual words of the ancients. Specific language skills that we will develop include recognizing syntactic patterns and larger narrative structures in connected passages of prose; reading Latin at sight with confidence; reading (and rereading) with increased speed while remaining attentive to very close analysis of assigned passages; and understanding how to use lexica, commentaries, and other scholarly instruments in reading an edition of an ancient text. In Fall 2020, we will read selections from the Letters of Pliny the Younger, supplemented, if time permits, with letters by Cicero, Seneca, and non-elite Romans. These texts will not only allow us to complete our primary objectives of building your language skills but also to engage with important aspects of Roman socio-cultural history, including issues of politics and marriage, the eruption of Mt. Vesuvius, and the rise of Christianity.</p>
 
     {% if not x %}
   </div>
