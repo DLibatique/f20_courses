@@ -1,0 +1,15 @@
+{% extends 'latn399/base.html' %}
+{% block body_block %}
+
+<div class="container bg-light p-4" style="padding-top:65px;">
+
+  <h1 class="text-center">{{ page_title|upper }}</h1>
+
+  <hr>
+
+  {% block content %}
+  {% endblock %}
+
+</div>
+
+{% endblock %}

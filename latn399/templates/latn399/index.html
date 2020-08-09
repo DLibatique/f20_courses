@@ -1,0 +1,106 @@
+{% extends 'latn399/base.html' %}
+{% block body_block %}
+
+<div class="bg-light">
+
+  <h1 class="text-center pt-2">{{ department }} {{ course_number }}<br>{{ course_title }}</h1>
+
+  <hr>
+
+  <h3 class="text-center text-uppercase pb-2">Next deadlines</h3>
+
+  {% if not x %}
+  <dl class="mb-0 row">
+    <dt class="col-sm-5 text-right">Friday, 9/4</dt>
+    <dd class="col-sm-7">
+      {% else %}
+      <h5 class="text-center">Friday, 9/4</h5>
+      {% endif %}
+      <ul>
+        <li>Read the <a href="{% url 'latn399:policies' %}">course policies</a></li>
+        <li>Read the <a href="{% url 'latn399:grading' %}">grading scheme</a></li>
+        <li>Read the <a href="{% url 'latn399:assignments' %}">assignment descriptions</a></li>
+        <li>Fill out this <a href="#">student information form</a></li>
+        <li>Complete this <a href="#">spot check</a></li>
+      </ul>
+      {% if not x %}
+    </dd>
+    <dt class="col-sm-5 text-right">Monday, 9/7</dt>
+    <dd class="col-sm-7">
+      {% else %}
+      <h5 class="text-center">Monday, 9/7</h5>
+      {% endif %}
+      <ul>
+        <li>Work through <a href="#">Shelton 1</a></li>
+      </ul>
+      {% if not x %}
+    </dd>
+  </dl>
+  {% endif %}
+
+  <p class="pb-2 text-center font-italic">(<a href="{% url 'latn399:schedule' %}">click for full schedule</a>)</p>
+
+</div>
+
+{% if not x %}
+<div class="row">
+
+  <div class="col-sm-6 border-right text-right">
+    {% endif %}
+    <h2 {% if x %}class="text-center" {% endif %}>Course Info</h2>
+    <ul class="list-unstyled">
+      <li><strong>Meeting Time</strong>: TR 9:45-11am Eastern</li>
+      <li><strong>Meeting Place</strong>: Zoom (see email)</li>
+      <li><strong>Instructor</strong>: Prof. Daniel Libatique (he/him/his)</li>
+      <li><strong>Office</strong>: Fenwick 410</li>
+      <li><strong>Student Hours</strong>: TBD</li>
+      <li><strong>Email</strong>: DLibatiq [at] holycross.edu</li>
+      <li><strong>Website</strong>: <a href="https://libatique.info">Click here</a>.</li>
+    </ul>
+
+    {% if not x %}
+  </div>
+  <div class="col-sm-6 pr-5">
+    {% else %}
+    <hr>
+    {% endif %}
+    <h2 {% if x %}class="text-center" {% endif %}>Course Description</h2>
+    <p>This course examines the construction of gender and sexuality through Roman literature and archaeology. We will aim both to understand the Romans' conceptualization of concepts like love, masculinity, femininity, homoeroticism, courtship, and marriage, among others, and to use those investigations to understand our own in the modern day.</p>
+
+    {% if not x %}
+  </div>
+
+</div>
+{% endif %}
+<hr>
+
+
+
+{% if not x %}
+<div class="row">
+
+  <div class="col-sm-2">
+    <p></p>
+  </div>
+  <div class="col-sm-8">
+
+    {% endif %}
+
+    <h2 {% if not x %}class="text-center" {% endif %}>Course Objectives</h2>
+    <ul>
+      <li>to define and demarcate the boundaries of “sex,” “gender,” and “sexuality”</li>
+      <li>to articulate how the Romans defined, performed, and policed gender and sexuality</li>
+      <li>to compare Roman constructions of gender and sexuality with our own modern notions</li>
+      <li>to develop Latin (sight) reading skills across various genres and time periods</li>
+      <li>to become proficient at identifying scholarly arguments and evaluating the stages and evidence of argumentation</li>
+
+    </ul>
+
+    {% if not x %}
+  </div>
+  <div class="col-sm-2">
+    <p></p>
+  </div>
+</div>
+{% endif %}
+{% endblock %}
