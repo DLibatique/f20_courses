@@ -9,10 +9,11 @@
     <div class="sticky-top" style="top:65px;">
       {% if not x %}
       <nav id="navbar-example3" class="nav nav-pills flex-column text-right">
-        <a class="nav-link" href="#participation-and-check-ins">Participation and Check-Ins</a>
-        <a class="nav-link" href="#quizzes">Quizzes</a>
-        <a class="nav-link" href="#long-form-assignments">Long-Form Assignments</a>
-        <a class="nav-link" href="#midterm-and-final">Midterm and Final</a>
+        <a class="nav-link" href="#participation">Participation</a>
+        <a class="nav-link" href="#liber-personalis"><em>Liber Personalis</em></a>
+        <a class="nav-link" href="#article-presentation-and-discussion-lead">Article Presentation and Discussion Lead</a>
+        <a class="nav-link" href="#fact-sheets">Fact Sheets</a>
+        <a class="nav-link" href="#check-ins">Check-Ins</a>
         <a class="nav-link" href="#final-semester-grade">Final Semester Grade</a>
       </nav>
       {% else %}
@@ -25,10 +26,11 @@
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
-            <a class="dropdown-item" href="#participation-and-check-ins">Participation and Check-Ins</a>
-            <a class="dropdown-item" href="#quizzes">Quizzes</a>
-            <a class="dropdown-item" href="#long-form-assignments">Long-Form Assignments</a>
-            <a class="dropdown-item" href="#midterm-and-final">Midterm and Final</a>
+            <a class="dropdown-item" href="#participation">Participation</a>
+            <a class="dropdown-item" href="#liber-personalis"><em>Liber Personalis</em></a>
+            <a class="dropdown-item" href="#article-presentation-and-discussion-lead">Article Presentation and Discussion Lead</a>
+            <a class="dropdown-item" href="#fact-sheets">Fact Sheets</a>
+            <a class="dropdown-item" href="#check-ins">Check-Ins</a>
             <a class="dropdown-item" href="#final-semester-grade">Final Semester Grade</a>
           </div>
         </div>
@@ -43,29 +45,29 @@
   <div class="col-8 border-left px-5">
     {% endif %}
 
-    <h4 id="participation-and-check-ins">Participation and Check-Ins (40%)</h4>
-    <p><strong>25%</strong> of your participation grade will come from participating in class, which means demonstrating that you’ve read the assignment before the class period in question (including noting vocabulary, syntactic constructions, any questions that you have about the grammar or vocab), engaging with your classmates and me, asking appropriate questions and requesting appropriate clarifications, and paying attention throughout the class period.</p>
-
-    <p><strong>15%</strong> of your participation grade will come from <strong>three (3) one-on-one check-ins (5% each)</strong> with me throughout the semester. You will get each 5% by literally showing up to a one-on-one Zoom session, the date and time of which you will set, and letting me know how things are going! Each check-in can be anything from a quick five-minute meeting to let me know that you’re having no issues at all, to an hour-long session where we go over grammatical concepts that you’re finding difficult or long-form assignments that you want some guidance on. It’s up to you! I just want to encourage you to stay in contact with me to let me know how things are going.</p>
+    <h4 id="participation">Participation (40%)</h4>
+    <p>Participation means contributing to our class meetings in productive and respectful ways through translating or asking questions about the Latin, discussing the arguments of and your responses to works of secondary scholarship, asking questions and offering thoughts in the Zoom chat box, and engaging in productive dialogues with your classmates and with me. </p>
 
     <hr>
 
-    <h4 id="quizzes">Quizzes (15%)</h4>
-    <p>There will be (TBD) quizzes throughout the semester that will test what we’ve been learning in class. Each quiz will be taken outside of class time, and they will be open-book, open-note, and open-Internet. More details to come.</p>
+    <h4 id="liber-personalis"><em>Liber Personalis</em> Assignment (30%)</h4>
+    <p>Our semester-long project will be curating a <em><strong>Liber Personalis</strong></em>, a collection of quotes, passages, and lines of poetry from our semester’s readings that are important to you and your understanding of Roman or modern gender and sexuality. How you define “important” is up to you! See the separate <a href="#"><em>Liber Personalis</em> page</a> for details.</p>
 
     <hr>
 
-    <h4 id="long-form-assignments">Long-Form Assignments (25%)</h4>
-    <p>There will be <strong>five (5) long-form assignments</strong>, each weighted at <strong>5%</strong></p> and each designed to have you practice a specific skill relating to Latin. All long-form assignments will be graded on a <strong>specification</strong> basis, meaning that they will earn a grade of either <strong>satisfactory or unsatisfactory</strong>. A grade of satisfactory earns the full 5%. If you get a grade of unsatisfactory on any long-form assignment, I will assign a provisional grade out of 100 points, and you can redo the assignment as many times as it takes to get the satisfactory. If you don’t get the satisfactory by the end of the semester, the provisional grade will stand and I will weight it appropriately into your semester grade.</p>
-
-    <p><a href="{% url 'latn399:assignments' %}">Guidelines for each long-form assignment can be found here.</a></p>
+    <h4 id="article-presentation-and-discussion-lead">Article Presentation and Discussion Lead (10%)</h4>
+    <p>You will choose one work of secondary scholarship in the course schedule for the semester and then lead a discussion about it in class. Each presentation and discussion lead will consist of the following parts: a one-on-one meeting with me the week before your presentation <strong>(5%)</strong>, a 5-10 minute summary of the article or chapter’s main arguments and evidence <strong>(2%)</strong>, and the offering of two or three questions (circulated before the class period in question) and the moderation of your classmates’ discussion of their thoughts <strong>(3%)</strong>. More details to come.</p>
 
     <hr>
 
-    <h4 id="midterm-and-final">Midterm and Final (20%)</h4>
-    <p>In lieu of a traditional midterm and final exam or essay, you will complete long-form projects, each weighted at <strong>10% each</strong>, that will draw on the various skills that you are developing in this course.</p>
+    <h4 id="fact-sheets">Fact Sheets (10%)</h4>
+    <p>For almost every week, you will be asked to complete and submit a “fact sheet” before our Tuesday meeting that consists of questions relating to the topic, author, or work under discussion that week. You can use whatever resources you have at your disposal, including the <em>Oxford Classical Dictionary</em>, the commentaries and secondary scholarship for the week, and even (gulp) Wikipedia. More details to come.</p>
 
-    <p><a href="{% url 'latn399:assignments' %}">Guidelines for the midterm and final can be found here.</a></p>
+    <hr>
+
+    <h4 id="check-ins">Check-Ins (10%)</h4>
+
+    <p>You will be asked to schedule two one-on-one meetings with me outside of the <em>Liber Personalis</em> meetings and the article presentation meeting so that we can touch base about how you’re doing in the class. The two meetings <strong>(each 5%)</strong> can occur at any point of the semester: very beginning and very end, both in the middle, etc. They can be as long or as short as you’d like, and we can touch on whatever topics you’d like: lingering questions about a reading, clarifications on one of the semester requirements, shooting the breeze. If you’d like to meet during my student hours, please just email me ahead of time to let me know that this will be one of your two check-ins. Easiest 10 percentage points ever, right?</p>
 
     <hr>
 
@@ -81,7 +83,6 @@
     </ul>
 
     <p>Grades ending in .45 or greater will be rounded up to the nearest whole number; grades ending in .44 or less will be rounded down to the nearest whole number.</p>
-
 
     <hr>
     {% if not x %}
