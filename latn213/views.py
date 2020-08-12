@@ -51,3 +51,9 @@ def schedule(request):
     course_context['page_title'] = 'Schedule'
 
     return render(request, 'latn213/pages/schedule.html', context=course_context)
+
+def grammar(request):
+
+    course_context['page_title'] = 'Running Grammar'
+
+    return render(request, 'latn213/pages/grammar.html', context=course_context)

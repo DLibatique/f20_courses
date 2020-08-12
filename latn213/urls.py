@@ -10,4 +10,5 @@ urlpatterns = [
     path('grading', views.grading, name="grading"),
     path('assignments', views.assignments, name="assignments"),
     path('schedule', views.schedule, name="schedule"),
+    path('grammar', views.grammar, name="grammar"),
 ]
