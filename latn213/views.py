@@ -97,7 +97,7 @@ def grammar(request):
 
     if request.user.is_superuser or request.user.profile.course == c:
 
-        course_context['page_title'] = 'Running Grammar'
+        course_context['page_title'] = 'Grammar'
 
         return render(request, 'latn213/pages/grammar.html', context=course_context)
 

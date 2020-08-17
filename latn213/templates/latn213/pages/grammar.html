@@ -1,24 +1,64 @@
 {% extends 'latn213/page.html' %}
 {% block content %}
 
-<h2>Assignment: Shelton #___</h2>
+{% if not x %}
+<div class="row">
 
-<h3>Ablative of Degree of Difference</h3>
+  <div class="col-4">
+    {% endif %}
+    <div class="sticky-top" style="top:65px;">
+      {% if not x %}
+      <nav id="navbar-example3" class="nav nav-pills flex-column text-right">
+        <a class="nav-link" href="#01">Shelton 1 (Pliny 1.1)</a>
+        <a class="nav-link" href="#02">Shelton 2 (Pliny 1.6)</a>
+      </nav>
+      {% else %}
+      <!-- mobile -->
+      <nav class="nav">
+        <div class="dropdown">
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Creative Project Options
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
-<h3>Indefinite Pronouns / Adjectives</h3>
+            <a class="dropdown-item" href="#01">Shelton 1 (Pliny 1.1)</a>
+            <a class="dropdown-item" href="#02">Shelton 2 (Pliny 1.6)</a>
+          </div>
+        </div>
+      </nav>
+      {% endif %}
+    </div> <!-- nav wrapper -->
+    {% if x %}
+    <hr>
+    {% else %}
+  </div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-<h3>Noun Clause of Result</h3>
+  <div class="col-8 border-left px-5">
+    {% endif %}
+    <h4 id="01">Shelton 1 (Pliny 1.1)</h4>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h5 class="text-center">Indefinite Pronouns and Adjectives</h5>
 
-<h3><em>fiō, fierī, factus sum</em></h3>
+    <h5 class="text-center">Ablative of Degree of Difference</h5>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h5 class="text-center">Noun Clause of Result / Object Noun Clause</h5>
 
-<hr>
+    <h5 class="text-center"><em>fiō, fierī, factus sum</em></h5>
 
+    <hr>
+
+    <h4 id="02">Shelton 2 (Pliny 1.6)</h4>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <hr>
+
+
+    {% if not x %}
+  </div> <!-- content div -->
+
+</div> <!-- row div for grid -->
+{% endif %}
 {% endblock %}
