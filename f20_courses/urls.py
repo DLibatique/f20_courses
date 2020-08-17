@@ -16,8 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 from django.conf.urls import include
+import clas199, latn213, latn399, core
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),
+    path('CLAS199-F20/', include('clas199.urls')),
+    path('LATN213-F20/', include('latn213.urls')),
+    path('LATN399-F20/', include('latn399.urls')),
 ]

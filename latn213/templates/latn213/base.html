@@ -52,6 +52,8 @@
           {% url 'latn213:grammar' as grammar %}
           <li class="nav-item"><a href="{% url 'latn213:grammar' %}" {% if request.get_full_path == grammar %}class='nav-link active' {% else %}class='nav-link' {% endif %}>Grammar</a></li>
 
+          <li class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>
+
         </ul>
 
       </div>

@@ -30,7 +30,7 @@ class Profile(models.Model):
 
     course = models.ForeignKey(
         Course,
-        related_name = 'students',
+        related_name = 'course',
         on_delete = models.CASCADE
     )
 

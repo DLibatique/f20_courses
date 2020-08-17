@@ -4,7 +4,7 @@ from . import views
 app_name = 'clas199'
 
 urlpatterns = [
-    path('', views.IndexView.as_view(), name="index"),
+    path('', views.index, name="index"),
     path('resources', views.resources, name="resources"),
     path('policies', views.policies, name="policies"),
     path('grading', views.grading, name="grading"),

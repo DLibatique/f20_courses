@@ -1,5 +1,13 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from core.models import Course, Profile
+from django.contrib.auth.admin import User
+
+# login imports
+from django.contrib.auth import authenticate,login,logout
+from django.http import HttpResponseRedirect, HttpResponse
+from django.urls import reverse
+from django.contrib.auth.decorators import login_required
 
 course_context = {
     'course_number': 'LATN 399',
@@ -7,47 +15,87 @@ course_context = {
     'content': 'hello world',
 }
 
+c = Course.objects.get(course_number=399)
+
 # Create your views here.
-class IndexView(TemplateView):
+@login_required
+def index(request):
 
-    template_name = 'latn399/index.html'
+    if request.user.is_superuser or request.user.profile.course == c:
 
-    def get_context_data(self,**kwargs):
-        context = super().get_context_data(**kwargs)
-        context['page_title'] = 'Home'
+        course_context['page_title'] = 'Home'
 
-        # get course context
-        for k in course_context:
-            context[k] = course_context[k]
+        return render(request, 'latn399/index.html', context=course_context)
 
-        return context
+    else:
 
+        return render(request, 'core/no_access.html', {})
+
+@login_required
 def resources(request):
 
-    course_context['page_title'] = 'Resources'
+    if request.user.is_superuser or request.user.profile.course == c:
 
-    return render(request, 'latn399/pages/resources.html', context=course_context)
+        course_context['page_title'] = 'Resources'
 
+        return render(request, 'latn399/pages/resources.html', context=course_context)
+
+    else:
+
+        return render(request, 'core/no_access.html', {})
+
+
+@login_required
 def policies(request):
 
-    course_context['page_title'] = 'Policies'
+    if request.user.is_superuser or request.user.profile.course == c:
 
-    return render(request, 'latn399/pages/policies.html', context=course_context)
+        course_context['page_title'] = 'Policies'
 
+        return render(request, 'latn399/pages/policies.html', context=course_context)
+
+    else:
+
+        return render(request, 'core/no_access.html', {})
+
+
+@login_required
 def grading(request):
 
-    course_context['page_title'] = 'Grading'
+    if request.user.is_superuser or request.user.profile.course == c:
 
-    return render(request, 'latn399/pages/grading.html', context=course_context)
+        course_context['page_title'] = 'Grading'
 
+        return render(request, 'latn399/pages/grading.html', context=course_context)
+
+    else:
+
+        return render(request, 'core/no_access.html', {})
+
+
+@login_required
 def assignments(request):
 
-    course_context['page_title'] = 'Assignments'
+    if request.user.is_superuser or request.user.profile.course == c:
 
-    return render(request, 'latn399/pages/assignments.html', context=course_context)
+        course_context['page_title'] = 'Assignments'
 
+        return render(request, 'latn399/pages/assignments.html', context=course_context)
+
+    else:
+
+        return render(request, 'core/no_access.html', {})
+
+
+@login_required
 def schedule(request):
 
-    course_context['page_title'] = 'Schedule'
+    if request.user.is_superuser or request.user.profile.course == c:
 
-    return render(request, 'latn399/pages/schedule.html', context=course_context)
+        course_context['page_title'] = 'Schedule'
+
+        return render(request, 'latn399/pages/schedule.html', context=course_context)
+
+    else:
+
+        return render(request, 'core/no_access.html', {})

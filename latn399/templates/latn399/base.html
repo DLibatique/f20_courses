@@ -49,6 +49,8 @@
           {% url 'latn399:schedule' as schedule %}
           <li class="nav-item"><a href="{% url 'latn399:schedule' %}" {% if request.get_full_path == schedule %}class='nav-link active' {% else %}class='nav-link' {% endif %}>Schedule</a></li>
 
+          <li class="nav-item"><a href="/logout" class="nav-link">Logout</a></li>
+
         </ul>
 
       </div>

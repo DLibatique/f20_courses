@@ -1,6 +1,15 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 
+# login imports
+from django.contrib.auth import authenticate,login,logout
+from django.http import HttpResponseRedirect, HttpResponse
+from django.urls import reverse
+from django.contrib.auth.decorators import login_required
+
+from core.models import Course, Profile
+from django.contrib.auth.admin import User
+
 course_context = {
     'department': 'CLAS',
     'course_number': 199,
@@ -9,59 +18,109 @@ course_context = {
     'help': 'help',
 }
 
+c = Course.objects.get(course_number=199)
+
 # Create your views here.
-class IndexView(TemplateView):
+@login_required
+def index(request):
 
-    template_name = 'clas199/index.html'
+    if request.user.is_superuser or request.user.profile.course == c:
 
-    def get_context_data(self,**kwargs):
-        context = super().get_context_data(**kwargs)
-        context['page_title'] = 'Home'
+        course_context['page_title'] = 'Home'
 
-        # get course context
-        for k in course_context:
-            context[k] = course_context[k]
+        return render(request, 'clas199/index.html', context=course_context)
 
-        return context
+    else:
 
+        return render(request, 'core/no_access.html', {})
+
+@login_required
 def resources(request):
 
-    course_context['page_title'] = 'Resources'
+    if request.user.is_superuser or request.user.profile.course == c:
 
-    return render(request, 'clas199/pages/resources.html', context=course_context)
+        course_context['page_title'] = 'Resources'
 
+        return render(request, 'clas199/pages/resources.html', context=course_context)
+
+    else:
+
+        return render(request, 'core/no_access.html', {})
+
+@login_required
 def policies(request):
 
-    course_context['page_title'] = 'Policies'
+    if request.user.is_superuser or request.user.profile.course == c:
 
-    return render(request, 'clas199/pages/policies.html', context=course_context)
+        course_context['page_title'] = 'Policies'
 
+        return render(request, 'clas199/pages/policies.html', context=course_context)
+
+    else:
+
+        return render(request, 'core/no_access.html', {})
+
+@login_required
 def grading(request):
 
-    course_context['page_title'] = 'Grading'
+    if request.user.is_superuser or request.user.profile.course == c:
 
-    return render(request, 'clas199/pages/grading.html', context=course_context)
+        course_context['page_title'] = 'Grading'
 
+        return render(request, 'clas199/pages/grading.html', context=course_context)
+
+    else:
+
+        return render(request, 'core/no_access.html', {})
+
+@login_required
 def creative_projects(request):
 
-    course_context['page_title'] = 'Creative Projects'
+    if request.user.is_superuser or request.user.profile.course == c:
 
-    return render(request, 'clas199/pages/creative_projects.html', context=course_context)
+        course_context['page_title'] = 'Creative Projects'
 
+        return render(request, 'clas199/pages/creative_projects.html', context=course_context)
+
+    else:
+
+        return render(request, 'core/no_access.html', {})
+
+@login_required
 def schedule(request):
 
-    course_context['page_title'] = 'Schedule'
+    if request.user.is_superuser or request.user.profile.course == c:
 
-    return render(request, 'clas199/pages/schedule.html', context=course_context)
+        course_context['page_title'] = 'Schedule'
 
+        return render(request, 'clas199/pages/schedule.html', context=course_context)
+
+    else:
+
+        return render(request, 'core/no_access.html', {})
+
+@login_required
 def essay(request):
 
-    course_context['page_title'] = 'Essay Tips'
+    if request.user.is_superuser or request.user.profile.course == c:
 
-    return render(request, 'clas199/pages/essay.html', context=course_context)
+        course_context['page_title'] = 'Essay Tips'
 
+        return render(request, 'clas199/pages/essay.html', context=course_context)
+
+    else:
+
+        return render(request, 'core/no_access.html', {})
+
+@login_required
 def citations(request):
 
-    course_context['page_title'] = 'Citation Examples'
+    if request.user.is_superuser or request.user.profile.course == c:
 
-    return render(request, 'clas199/pages/citation.html', context=course_context)
+        course_context['page_title'] = 'Citation Examples'
+
+        return render(request, 'clas199/pages/citation.html', context=course_context)
+
+    else:
+
+        return render(request, 'core/no_access.html', {})
