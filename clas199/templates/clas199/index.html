@@ -11,8 +11,8 @@
 
   {% if not x %}
   <dl class="mb-0 row">
-    <dt class="col-sm-5 text-right">Thursday, 9/3</dt>
-    <dd class="col-sm-7">
+    <dt class="col-sm-5 text-right" {% else %}<h5 class="text-center" {% endif %}>Thursday, 9/3{% if x %}</h5>{% else %}</dt>
+    <dd class="col-sm-7">{% endif %}
       <ul>
         <li>Read the <a href="{% url 'clas199:policies' %}">course policies</a></li>
         <li>Read the <a href="{% url 'clas199:grading' %}">grading contract</a></li>
@@ -20,9 +20,10 @@
         <li>Complete this <a href="https://forms.gle/4jLvYuM5vv4ghakG9">dry-run quiz</a></li>
         <li>Read <a href="https://drive.google.com/file/d/11imJVwxHFgirRM0qkc0F112fUI2ppeTQ/view?usp=sharing">Ormand 1-24</a></li>
       </ul>
+      {% if not x %}
     </dd>
-    <dt class="col-sm-5 text-right">Tuesday, 9/8</dt>
-    <dd class="col-sm-7">
+    <dt class="col-sm-5 text-right" {% else %}<h5 class="text-center" {% endif %}>Tuesday, 9/8{% if x %}</h5>{% else %}</dt>
+    <dd class="col-sm-7">{% endif %}
       <ul>
         <li>Complete <a href="#">Quiz #1 (Introduction)</a></li>
         <li>Think about breakout room prompt for Week 2</li>
@@ -30,47 +31,19 @@
         <li>Read <a href="https://drive.google.com/file/d/11x7hf6mV8S1i5Yfrbb0PI49rA-Bk3INL/view?usp=sharing">Robson 3-35</a></li>
         <li>Read <a href="https://drive.google.com/file/d/1_ExjMvd3RdSnCLDcrPgawoeV1ru40X4V/view?usp=sharing">Robson 36-66</a></li>
       </ul>
+      {% if not x %}
     </dd>
-    <dt class="col-sm-5 text-right">Friday, 9/11</dt>
-    <dd class="col-sm-7">
+    <dt class="col-sm-5 text-right" {% else %}<h5 class="text-center" {% endif %}>Friday, 9/11{% if x %}</h5>{% else %}</dt>
+    <dd class="col-sm-7">{% endif %}
       <ul>
         <li>Submit Response #1 (by 11:59pm)</li>
       </ul>
+      {% if not x %}
     </dd>
   </dl>
-
-  <p class="pb-2 text-center font-italic">(<a href="{% url 'clas199:schedule' %}">click for full schedule</a>)</p>
-
-  {% else %}
-  <!-- mobile -->
-
-  <h5 class="text-center">Thursday, 9/3</h5>
-  <ul>
-    <li>Read the <a href="{% url 'clas199:policies' %}">course policies</a></li>
-    <li>Read the <a href="{% url 'clas199:grading' %}">grading contract</a></li>
-    <li>Fill out this <a href="https://forms.gle/Ax2ZqAtcxDyucdJh7">student information form</a></li>
-    <li>Complete this <a href="https://forms.gle/4jLvYuM5vv4ghakG9">dry-run quiz</a></li>
-    <li>Read <a href="https://drive.google.com/file/d/11imJVwxHFgirRM0qkc0F112fUI2ppeTQ/view?usp=sharing">Ormand 1-24</a></li>
-  </ul>
-
-  <h5 class="text-center">Tuesday, 9/8</h5>
-  <ul>
-    <li>Complete <a href="#">Quiz #1 (Introduction)</a></li>
-    <li>Think about breakout room prompt for Week 2</li>
-    <li>Read <a href="https://drive.google.com/file/d/11tpFBAbLnUGhK94NrIbwUqZkUqZNdv6w/view?usp=sharing">Ormand 55-72</a></li>
-    <li>Read <a href="https://drive.google.com/file/d/11x7hf6mV8S1i5Yfrbb0PI49rA-Bk3INL/view?usp=sharing">Robson 3-35</a></li>
-    <li>Read <a href="https://drive.google.com/file/d/1_ExjMvd3RdSnCLDcrPgawoeV1ru40X4V/view?usp=sharing">Robson 36-66</a></li>
-  </ul>
-
-  <h5 class="text-center">Friday, 9/11</h5>
-  <ul>
-    <li>Submit Response #1 (by 11:59pm)</li>
-  </ul>
-
-
-  <p class="pb-2 text-center font-italic">(<a href="{% url 'clas199:schedule' %}">click for full schedule</a>)</p>
-
   {% endif %}
+
+  <p class="pb-2 text-center font-italic">(<a href="{% url 'clas199:schedule' %}">click for full schedule</a>)</p>
 
 </div>
 
