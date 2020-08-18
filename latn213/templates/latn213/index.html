@@ -11,10 +11,8 @@
 
   {% if not x %}
   <dl class="mb-0 row">
-    <dt class="col-sm-5 text-right">Friday, 9/4</dt>
+    <dt class="col-sm-5 text-right" {% else %}<h5 class="text-center" {% endif %}>Friday, 9/4{% if x %}</h5>{% else %}</dt>
     <dd class="col-sm-7">
-      {% else %}
-      <h5 class="text-center">Friday, 9/4</h5>
       {% endif %}
       <ul>
         <li>Read the <a href="{% url 'latn213:policies' %}">course policies</a></li>
@@ -25,10 +23,8 @@
       </ul>
       {% if not x %}
     </dd>
-    <dt class="col-sm-5 text-right">Monday, 9/7</dt>
+    <dt class="col-sm-5 text-right" {% else %}<h5 class="text-center" {% endif %}>Monday, 9/7{% if x %}</h5>{% else %}</dt>
     <dd class="col-sm-7">
-      {% else %}
-      <h5 class="text-center">Monday, 9/7</h5>
       {% endif %}
       <ul>
         <li>Work through <a href="{% url 'latn213:schedule' %}#monday-september-7">Shelton 1</a></li>
