@@ -1,3 +1,5 @@
 __pycache__
 populations.py
 secrets.json
+settings_local.py
+db.sqlite3
