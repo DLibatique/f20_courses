@@ -74,13 +74,13 @@ def grading(request):
 
 
 @login_required
-def assignments(request):
+def liber(request):
 
     if request.user.is_superuser or request.user.profile.course == c:
 
-        course_context['page_title'] = 'Assignments'
+        course_context['page_title'] = 'Liber Personalis'
 
-        return render(request, 'latn399/pages/assignments.html', context=course_context)
+        return render(request, 'latn399/pages/liber.html', context=course_context)
 
     else:
 

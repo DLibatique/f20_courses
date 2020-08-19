@@ -43,8 +43,8 @@
           {% url 'latn399:grading' as grading %}
           <li class="nav-item"><a href="{% url 'latn399:grading' %}" f {% if request.get_full_path == grading %}class='nav-link active' {% else %}class='nav-link' {% endif %}>Grading</a></li>
 
-          {% url 'latn399:assignments' as assignments %}
-          <li class="nav-item"><a href="{% url 'latn399:assignments' %}" {% if request.get_full_path == assignments %}class='nav-link active' {% else %}class='nav-link' {% endif %}>Assignments</a></li>
+          {% url 'latn399:liber' as liber %}
+          <li class="nav-item"><a href="{% url 'latn399:liber' %}" {% if request.get_full_path == liber %}class='nav-link active' {% else %}class='nav-link' {% endif %}>Liber Personalis</a></li>
 
           {% url 'latn399:schedule' as schedule %}
           <li class="nav-item"><a href="{% url 'latn399:schedule' %}" {% if request.get_full_path == schedule %}class='nav-link active' {% else %}class='nav-link' {% endif %}>Schedule</a></li>
