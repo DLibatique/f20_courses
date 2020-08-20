@@ -7,7 +7,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 
-from core.models import Course, Profile
+from core.models import UserCourse
 from django.contrib.auth.admin import User
 
 course_context = {
@@ -16,13 +16,13 @@ course_context = {
     'content': 'hello world',
 }
 
-c = Course.objects.get(course_number=213)
+c = 'LATN213'
 
 # Create your views here.
 @login_required
 def index(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Home'
 
@@ -35,7 +35,7 @@ def index(request):
 
 def resources(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Resources'
 
@@ -47,7 +47,7 @@ def resources(request):
 
 def policies(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Policies'
 
@@ -59,7 +59,7 @@ def policies(request):
 
 def grading(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Grading'
 
@@ -71,7 +71,7 @@ def grading(request):
 
 def assignments(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Assignments'
 
@@ -83,7 +83,7 @@ def assignments(request):
 
 def schedule(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Schedule'
 
@@ -95,7 +95,7 @@ def schedule(request):
 
 def grammar(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Grammar'
 

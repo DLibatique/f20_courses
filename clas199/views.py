@@ -7,7 +7,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 
-from core.models import Course, Profile
+from core.models import UserCourse
 from django.contrib.auth.admin import User
 
 course_context = {
@@ -18,13 +18,13 @@ course_context = {
     'help': 'help',
 }
 
-c = Course.objects.get(course_number=199)
+c = 'CLAS199'
 
 # Create your views here.
 @login_required
 def index(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Home'
 
@@ -37,7 +37,7 @@ def index(request):
 @login_required
 def resources(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Resources'
 
@@ -50,7 +50,7 @@ def resources(request):
 @login_required
 def policies(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Policies'
 
@@ -63,7 +63,7 @@ def policies(request):
 @login_required
 def grading(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Grading'
 
@@ -76,7 +76,7 @@ def grading(request):
 @login_required
 def creative_projects(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Creative Projects'
 
@@ -89,7 +89,7 @@ def creative_projects(request):
 @login_required
 def schedule(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Schedule'
 
@@ -102,7 +102,7 @@ def schedule(request):
 @login_required
 def essay(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Essay Tips'
 
@@ -115,7 +115,7 @@ def essay(request):
 @login_required
 def citations(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Citation Examples'
 

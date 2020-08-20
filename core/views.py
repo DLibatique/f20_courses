@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from core.models import Course, Profile
+from core.models import UserCourse
 from django.contrib.auth.admin import User
 from django.contrib.auth.views import LoginView, LogoutView
 
@@ -20,9 +20,9 @@ def user_login(request):
 
         user = authenticate(username=username, password=password)
 
-        clas199 = Course.objects.get(department='CLAS', course_number=199)
-        latn213 = Course.objects.get(department='LATN', course_number=213)
-        latn399 = Course.objects.get(department='LATN', course_number=399)
+        # clas199 = Course.objects.get(department='CLAS', course_number=199)
+        # latn213 = Course.objects.get(department='LATN', course_number=213)
+        # latn399 = Course.objects.get(department='LATN', course_number=399)
 
         if user:
             login(request,user)
@@ -33,9 +33,9 @@ def user_login(request):
                 if user.is_superuser:
                     return render(request, 'core/superuser_access.html', {})
                 else:
-                    if user.profile.course == clas199:
+                    if user.usercourse.course == 'CLAS199':
                         return HttpResponseRedirect('CLAS199-F20/')
-                    elif user.profile.course == latn213:
+                    elif user.usercourse.course == 'LATN213':
                         return HttpResponseRedirect('LATN213-F20/')
                     else:
                         return HttpResponseRedirect('LATN399-F20/')

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
-from core.models import Course, Profile
+from core.models import UserCourse
 from django.contrib.auth.admin import User
 
 # login imports
@@ -15,13 +15,13 @@ course_context = {
     'content': 'hello world',
 }
 
-c = Course.objects.get(course_number=399)
+c = 'LATN399'
 
 # Create your views here.
 @login_required
 def index(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Home'
 
@@ -34,7 +34,7 @@ def index(request):
 @login_required
 def resources(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Resources'
 
@@ -48,7 +48,7 @@ def resources(request):
 @login_required
 def policies(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Policies'
 
@@ -62,7 +62,7 @@ def policies(request):
 @login_required
 def grading(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Grading'
 
@@ -76,7 +76,7 @@ def grading(request):
 @login_required
 def liber(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Liber Personalis'
 
@@ -90,7 +90,7 @@ def liber(request):
 @login_required
 def schedule(request):
 
-    if request.user.is_superuser or request.user.profile.course == c:
+    if request.user.is_superuser or request.user.usercourse.course == c:
 
         course_context['page_title'] = 'Schedule'
 
