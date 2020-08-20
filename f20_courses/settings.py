@@ -52,10 +52,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'core',
     'latn213',
     'clas199',
     'latn399',
-    'core',
     'django_user_agents',
 ]
 
