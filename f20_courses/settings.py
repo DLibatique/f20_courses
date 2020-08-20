@@ -101,6 +101,9 @@ DATABASES = {
         'USER': 'dlibatique',
         'PASSWORD': get_secret('DB_PASSWORD'),
         'HOST': 'dlibatique.mysql.pythonanywhere-services.com',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            }
     }
 }
 
