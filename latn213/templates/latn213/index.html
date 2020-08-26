@@ -7,6 +7,12 @@
 
   <hr>
 
+  <div class="pb-4 d-flex justify-content-center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/QO6jt4BMzlU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <hr>
+
   <h3 class="text-center text-uppercase pb-2">Next deadlines</h3>
 
   {% if not x %}
@@ -20,7 +26,7 @@
         <li>Read the <a href="{% url 'latn213:assignments' %}">assignment descriptions</a></li>
         <li>Bring at least one question about the policies, grading scheme, or assignment descriptions to class</li>
         <li>Fill out this <a href="https://forms.gle/Ax2ZqAtcxDyucdJh7">student information form</a></li>
-        <li>Complete this <a href="https://forms.gle/QKqxyEtS4AZTUpy99">spot check</a> without consulting any outside sources!</li>
+        <li>Complete this (ungraded) <a href="https://forms.gle/QKqxyEtS4AZTUpy99">spot check</a> without consulting any outside sources!</li>
       </ul>
       {% if not x %}
     </dd>
@@ -36,12 +42,6 @@
   {% endif %}
 
   <p class="pb-2 text-center font-italic">(<a href="{% url 'latn213:schedule' %}">click for full schedule</a>)</p>
-
-  <hr>
-
-  <div class="pb-4 d-flex justify-content-center">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/QO6jt4BMzlU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
 
 </div>
 
