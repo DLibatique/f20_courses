@@ -6,6 +6,17 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+django = "*"
+django-user-agents = "*"
+mysqlclient = "*"
+pymysql = "*"
+python-memcached = "*"
+pytz = "*"
+pyyaml = "*"
+six = "*"
+sqlparse = "*"
+ua-parser = "*"
+user-agents = "*"
 
 [requires]
 python_version = "3.7"
