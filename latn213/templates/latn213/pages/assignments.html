@@ -14,8 +14,7 @@
         <a class="nav-link" href="#reverse-translation">Reverse Translation</a>
         <a class="nav-link" href="#response-composition">Response Composition</a>
         <a class="nav-link" href="#response-translation">Response Translation</a>
-        <a class="nav-link" href="#midterm">Midterm</a>
-        <a class="nav-link" href="#final">Final: Write Your Own Exam</a>
+        <a class="nav-link" href="#midterm-and-final">Midterm and Final</a>
       </nav>
       {% else %}
       <!-- mobile -->
@@ -32,8 +31,7 @@
             <a class="dropdown-item" href="#reverse-translation">Reverse Translation</a>
             <a class="dropdown-item" href="#response-composition">Response Composition</a>
             <a class="dropdown-item" href="#response-translation">Response Translation</a>
-            <a class="dropdown-item" href="#midterm">Midterm: Mini-Commentary</a>
-            <a class="dropdown-item" href="#final">Final: Write Your Own Exam</a>
+            <a class="dropdown-item" href="#midterm-and-final">Midterm and Final</a>
           </div>
         </div>
       </nav>
@@ -47,7 +45,9 @@
 
   <div class="col-8 border-left px-5">
     {% endif %}
-    <p><a href="{% url 'latn213:grading'%}#long-form-assignments">Semester grade weights and other details for these assignments may be found here.</a></p>
+    <h3><a href="{% url 'latn213:grading'%}#long-form-assignments">Semester grade weights and other details for these assignments may be found here.</a></h3>
+
+    <hr>
 
     <h4 id="recitation">Recitation</h4>
 
@@ -59,13 +59,25 @@
 
     <h4 id="word-study">Word Study</h4>
 
-    <p>You will choose one word and trace it (and any of its declensions or conjugations) throughout Pliny’s letters through methods and tools that I will demonstrate for you. How often does the word appear? When is a noun used as a subject versus a direct object? When is a verb used in the subjunctive versus the indicative? More specific guidelines to come.</p>
+    <p>You will choose one word and trace it (and any of its declensions or conjugations) throughout Pliny’s letters through methods and tools that I will demonstrate for you. How often does the word appear? When is a noun used as a subject versus a direct object? When is a verb used in the subjunctive versus the indicative?</p>
+
+    <p><a href="https://docs.google.com/document/d/1zN8C4NfwDfilJNCOZz7NIinkF87QxH4XkADO32TBgI0/edit?usp=sharing">You can find specific guidelines for this assignment here.</a></p>
+
+    <p>And here is the video linked in the instructions on using Perseus to help you with this assignment.</p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/WzM1rqFaSg8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     <hr>
 
     <h4 id="reverse-translation">Reverse Translation</h4>
 
-    <p>I will provide a translation of one of Pliny’s letters and ask you to evaluate it. Is the translator faithful to the actual Latin words and constructions? Does the translator capture Pliny’s tone well? Is the translation still comprehensible to a 21st century audience? If not, can you translate the translation into modern English that we can understand? More specific guidelines to come.</p>
+    <p>I will provide a translation of one of Pliny’s letters and ask you to evaluate it. Is the translator faithful to the actual Latin words and constructions? Does the translator capture Pliny’s tone well? Is the translation still comprehensible to a 21st century audience? If not, can you translate the translation into modern English that we can understand?</p>
+
+    <p><a href="https://docs.google.com/document/d/1ceblUsduAwxBlFD9yGOSoGKlYWpG8oLHSZCVyaeVSWU/edit?usp=sharing">You can find specific guidelines for this assignment here.</a></p>
+
+    <p>And here is the video linked in the suggestions on using the Ugarit Translation Aligner (optionally!) to help you with this assignment.</p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/lObdv-ZgK2Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     <hr>
 
@@ -81,21 +93,9 @@
 
     <hr>
 
-    <h4 id="midterm">Midterm</h4>
+    <h4 id="midterm-and-final">Midterm and Final</h4>
 
-    <p>The midterm will be an open-note, open-book, open-Internet exam that you will complete outside of class by <strong>DUE DATE HERE</strong>. It will include morphological and grammar questions, translation prompts, and comprehension questions. More details to come.</p>
-
-    <hr>
-
-    <h4 id="final">Final: Write Your Own Exam</h4>
-
-    <p>For the final, <strong>you</strong> will write your own exam! By having you peruse your own notes and assignments to come up with questions and prompts, you'll gain a greater appreciation of what we're doing in this course and identify what's become important to you as we've learned to read more Latin.</p>
-    <p>The final exam will consist of two parts:</p>
-    <ul>
-      <li>(5%) First, based on guidelines that I will provide, you will write your own exam and send it to me by <strong>DUE DATE HERE</strong>. Then, <em>I will actually take your exam as if I were your student and then submit my exam back to you!</em></li>
-      <li>(5%) Second, you will <strong>grade</strong> my exam (I will purposefully try to get some questions wrong), and then submit your corrections back to me.</li>
-    </ul>
-    <p>More details to come.</p>
+    <p>The midterm and final will be open-note, open-book, open-Internet exams that you will complete outside of class. Each will include morphological and grammar questions, translation prompts, and comprehension questions on their respective halves of the course (i.e., the final will not be cumulative). More details to come.</p>
 
 
     {% if not x %}
