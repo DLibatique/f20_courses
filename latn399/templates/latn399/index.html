@@ -17,13 +17,21 @@
 
   {% if not x %}
   <dl class="mb-0 row">
-    <dt class="col-sm-5 text-right" {% else %}<h5 class="text-center" {% endif %}>Thursday, 9/10{% if x %}</h5>{% else %}</dt>
+    <dt class="col-sm-5 text-right" {% else %}<h5 class="text-center" {% endif %}>Tuesday, 9/15{% if x %}</h5>{% else %}</dt>
     <dd class="col-sm-7">
       {% endif %}
       <ul>
-        <li>Translate <a href="{% url 'latn399:schedule' %}#09-10-2020">Livy 1.9.11-16; 1.13</a> (make liber entry)</li>
-        <li>Read (in translation): <a href="https://drive.google.com/file/d/16XXnr-GJa3fuBxRtRbawWbxyAHbzFKLS/view?usp=sharing">Livy 1.10-13</a></li>
-        <li>Read <a href="https://classicalstudies.org/scs-blog/sara-l-hales/blog-teaching-classics-age-metoo">Hales and Park 2018</a> (make liber entry)</li>
+        <li>Read (in translation): <a href="https://drive.google.com/file/d/17KN2_J6QqjhpSilDOFCMGS8S5MRXyDGp/view?usp=sharing">Livy 1.57-60</a></li>
+        <li>Translate <a href="{% url 'latn399:schedule' %}#09-15-20">Livy 1.57.10 (starting midway) - 1.58.5</a> (make liber entry)</li>
+      </ul>
+      {% if not x %}
+    </dd>
+    <dt class="col-sm-5 text-right" {% else %}<h5 class="text-center" {% endif %}>Thursday, 9/17{% if x %}</h5>{% else %}</dt>
+    <dd class="col-sm-7">
+      {% endif %}
+      <ul>
+        <li>Translate <a href="{% url 'latn399:schedule' %}#09-17-20">Livy 1.58.6 - 1.59.2</a> (make liber entry)</li>
+        <li>Read <a href="https://drive.google.com/file/d/14xMvEPJov4OgfjzISaHnlmtWjV5hVZYg/view?usp=sharing">Joshel 2002</a> (make liber entry)</li>
       </ul>
       {% if not x %}
     </dd>
