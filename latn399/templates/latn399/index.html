@@ -36,6 +36,14 @@
       </ul>
       {% if not x %}
     </dd>
+    <dt class="col-sm-5 text-right" {% else %}<h5 class="text-center" {% endif %}>Friday, 10/2{% if x %}</h5>{% else %}</dt>
+    <dd class="col-sm-7">
+      {% endif %}
+      <ul>
+        <li>Submit <a href="{% url 'latn399:liber' %}#analyses">liber personalis analysis #1</a></li>
+      </ul>
+      {% if not x %}
+    </dd>
   </dl>
   {% endif %}
 
