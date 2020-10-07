@@ -9,23 +9,45 @@
     <div class="sticky-top" style="top:65px;">
       {% if not x %}
       <nav id="navbar-example3" class="nav nav-pills flex-column text-right">
-        <a class="nav-link" href="#01">Shelton 1 (Pliny 1.1)</a>
-        <a class="nav-link" href="#02">Shelton 2 (Pliny 1.6)</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#01" role="button" aria-haspopup="true" aria-expanded="false">Shelton 1 (Pliny 1.1)</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#indefinite-head">Indefinite Pronouns/Adjectives</a>
+            <a class="dropdown-item" href="#degree-of-difference-head">Ablative of Degree of Difference</a>
+            <a class="dropdown-item" href="#noun-clause-of-result-head">Noun Clause of Result</a>
+            <a class="dropdown-item" href="#impersonal-verbs-head">Impersonal Verbs and <em>paenitet</em></a>
+            <a class="dropdown-item" href="#fio-head"><em>fiō, fierī, factus sum</em></a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#02" role="button" aria-haspopup="true" aria-expanded="false">Shelton 2 (Pliny 1.6)</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#separation-head">Ablative of Separation</a>
+            <a class="dropdown-item" href="#means-agent-head">Ablative of Means vs. Ablative of Agent</a>
+            <a class="dropdown-item" href="#objective-genitive-head">Objective and Subjective Genitive</a>
+            <a class="dropdown-item" href="#alt-2nd-head">Alternative 2nd Singular Passive</a>
+          </div>
+        </li>
       </nav>
       {% else %}
       <!-- mobile -->
       <nav class="nav">
-        <div class="dropdown">
-
-          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Shelton Letter
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-
-            <a class="dropdown-item" href="#01">Shelton 1 (Pliny 1.1)</a>
-            <a class="dropdown-item" href="#02">Shelton 2 (Pliny 1.6)</a>
-          </div>
-        </div>
+        <li class="nav-item dropdown">
+          <button class="btn nav-link dropdown-toggle btn-primary" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Topics</a>
+            <div class="dropdown-menu">
+              <h6 class="dropdown-header">Shelton 1 (Pliny 1.1)</h6>
+              <a class="dropdown-item" href="#indefinite-head">Indefinite Pronouns/Adjectives</a>
+              <a class="dropdown-item" href="#degree-of-difference-head">Ablative of Degree of Difference</a>
+              <a class="dropdown-item" href="#noun-clause-of-result-head">Noun Clause of Result</a>
+              <a class="dropdown-item" href="#impersonal-verbs-head">Impersonal Verbs and <em>paenitet</em></a>
+              <a class="dropdown-item" href="#fio-head"><em>fiō, fierī, factus sum</em></a>
+              <h6 class="dropdown-header">Shelton 2 (Pliny 1.6)</h6>
+              <a class="dropdown-item" href="#separation-head">Ablative of Separation</a>
+              <a class="dropdown-item" href="#means-agent-head">Ablative of Means vs. Ablative of Agent</a>
+              <a class="dropdown-item" href="#objective-genitive-head">Objective and Subjective Genitive</a>
+              <a class="dropdown-item" href="#alt-2nd-head">Alternative 2nd Singular Passive</a>
+            </div>
+        </li>
       </nav>
       {% endif %}
     </div> <!-- nav wrapper -->
@@ -48,13 +70,11 @@
 
           <div class="card-header" id="indefinite-head">
 
-            <h3 class="mb-0">
-              <button class="btn btn-success" data-toggle="collapse" data-target="#indefinite-body" aria-expanded="true" aria-controls="indefinite-body">Indefinite Pronouns/Adjectives</a>
-            </h3>
+            <h3 class="mb-0">Indefinite Pronouns/Adjectives</h3>
 
           </div>
 
-          <div id="indefinite-body" class="collapse" aria-labelledby="indefinite-head">
+          <div id="indefinite-body">
 
             <div class="card-body bg-light">
 
@@ -65,83 +85,85 @@
               <p>The best way to remember this is the following rhyme: <strong>After sī, nisī, num, and nē, all the ali-'s fall away.</strong> </p>
 
               <p>The declension chart is as follows:</p>
+              <div class="table-responsive">
 
-              <table class="table">
-                <thead>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td><strong>Masculine</strong></td>
-                    <td><strong>Feminine</strong></td>
-                    <td><strong>Neuter</strong></td>
-                  </tr>
-                <tbody>
-                  <tr>
-                    <td rowspan="5"><strong>Sing</strong></td>
-                    <td><strong>Nom</strong></td>
-                    <td>aliquis (aliquī)</td>
-                    <td>aliqua</td>
-                    <td>aliquid (aliquod)</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Gen</strong></td>
-                    <td>alicuius</td>
-                    <td>alicuius</td>
-                    <td>alicuius</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Dat</strong></td>
-                    <td>alicui</td>
-                    <td>alicui</td>
-                    <td>alicui</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Acc</strong></td>
-                    <td>aliquem</td>
-                    <td>aliquam</td>
-                    <td>aliquid (aliquod)</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Abl</strong></td>
-                    <td>aliquō</td>
-                    <td>aliquā</td>
-                    <td>aliquō</td>
-                  </tr>
-                  <tr>
-                    <td rowspan="5"><strong>Pl</strong></td>
-                    <td><strong>Nom</strong></td>
-                    <td>aliquī</td>
-                    <td>aliquae</td>
-                    <td>aliqua</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Gen</strong></td>
-                    <td>aliquōrum</td>
-                    <td>aliquārum</td>
-                    <td>aliquōrum</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Dat</strong></td>
-                    <td>aliquibus</td>
-                    <td>aliquibus</td>
-                    <td>aliquibus</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Acc</strong></td>
-                    <td>aliquōs</td>
-                    <td>aliquās</td>
-                    <td>aliqua</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Abl</strong></td>
-                    <td>aliquibus</td>
-                    <td>aliquibus</td>
-                    <td>aliquibus</td>
-                  </tr>
-                </tbody>
-                </thead>
-              </table>
 
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td><strong>Masculine</strong></td>
+                      <td><strong>Feminine</strong></td>
+                      <td><strong>Neuter</strong></td>
+                    </tr>
+                  <tbody>
+                    <tr>
+                      <td rowspan="5"><strong>Sing</strong></td>
+                      <td><strong>Nom</strong></td>
+                      <td>aliquis (aliquī)</td>
+                      <td>aliqua</td>
+                      <td>aliquid (aliquod)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Gen</strong></td>
+                      <td>alicuius</td>
+                      <td>alicuius</td>
+                      <td>alicuius</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Dat</strong></td>
+                      <td>alicui</td>
+                      <td>alicui</td>
+                      <td>alicui</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Acc</strong></td>
+                      <td>aliquem</td>
+                      <td>aliquam</td>
+                      <td>aliquid (aliquod)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Abl</strong></td>
+                      <td>aliquō</td>
+                      <td>aliquā</td>
+                      <td>aliquō</td>
+                    </tr>
+                    <tr>
+                      <td rowspan="5"><strong>Pl</strong></td>
+                      <td><strong>Nom</strong></td>
+                      <td>aliquī</td>
+                      <td>aliquae</td>
+                      <td>aliqua</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Gen</strong></td>
+                      <td>aliquōrum</td>
+                      <td>aliquārum</td>
+                      <td>aliquōrum</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Dat</strong></td>
+                      <td>aliquibus</td>
+                      <td>aliquibus</td>
+                      <td>aliquibus</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Acc</strong></td>
+                      <td>aliquōs</td>
+                      <td>aliquās</td>
+                      <td>aliqua</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Abl</strong></td>
+                      <td>aliquibus</td>
+                      <td>aliquibus</td>
+                      <td>aliquibus</td>
+                    </tr>
+                  </tbody>
+                  </thead>
+                </table>
+              </div>
               <p>The second indefinite in this letter takes two forms. As a pronoun, it is <strong>quisque, quidque, "each one", "every one"</strong>; as an adjective, it is <strong>quīque, quaeque, quodque, "each", "every"</strong>. Note that the pronoun form is simply the <a href="https://lingualatina.github.io/textbook/reference/pronouns-paradigms/#quis-quid---who-which-what">interrogative pronoun</a> (click for declension chart) with the suffix <strong>-que</strong> added to the end of any of its declined forms. The adjectival form is simply the <a href="https://lingualatina.github.io/textbook/reference/pronouns-paradigms/#relative">relative pronoun</a> (click for declension chart) with the same suffix <strong>-que</strong> added to it.</p>
 
             </div>
@@ -155,12 +177,12 @@
           <div class="card-header" id="degree-of-difference-head">
 
             <h3 class="mb-0">
-              <button class="btn btn-success" data-toggle="collapse" data-target="#degree-of-difference-body" aria-expanded="true" aria-controls="degree-of-difference-body">Ablative of Degree of Difference</a>
+              Ablative of Degree of Difference
             </h3>
 
           </div>
 
-          <div id="degree-of-difference-body" class="collapse" aria-labelledby="degree-of-difference-head">
+          <div id="degree-of-difference-body">
 
             <div class="card-body bg-light">
 
@@ -181,12 +203,12 @@
           <div class="card-header" id="noun-clause-of-result-head">
 
             <h3 class="mb-0">
-              <button class="btn btn-success" data-toggle="collapse" data-target="#noun-clause-of-result-body" aria-expanded="true" aria-controls="noun-clause-of-result-body">Substantive Clauses: Noun Clause of Result</a>
+              Substantive Clauses:<br>Noun Clause of Result
             </h3>
 
           </div>
 
-          <div id="noun-clause-of-result-body" class="collapse" aria-labelledby="noun-clause-of-result-head">
+          <div id="noun-clause-of-result-body">
 
             <div class="card-body bg-light">
 
@@ -221,12 +243,12 @@
           <div class="card-header" id="impersonal-verbs-head">
 
             <h3 class="mb-0">
-              <button class="btn btn-success" data-toggle="collapse" data-target="#impersonal-verbs-body" aria-expanded="true" aria-controls="impersonal-verbs-body">Impersonal Verbs and <em>paenitet</em></a>
+              Impersonal Verbs and <em>paenitet</em>
             </h3>
 
           </div>
 
-          <div id="impersonal-verbs-body" class="collapse" aria-labelledby="impersonal-verbs-head">
+          <div id="impersonal-verbs-body">
 
             <div class="card-body bg-light">
 
@@ -261,12 +283,12 @@
           <div class="card-header" id="fio-head">
 
             <h3 class="mb-0">
-              <button class="btn btn-success" data-toggle="collapse" data-target="#fio-body" aria-expanded="true" aria-controls="fio-body"><em>fiō, fierī, factus sum</em></a>
+              <em>fiō, fierī, factus sum</em>
             </h3>
 
           </div>
 
-          <div id="fio-body" class="collapse" aria-labelledby="fio-head">
+          <div id="fio-body">
             <div class="card-body bg-light">
 
               <p>There is an important irregular verb that you should become familiar with: <strong>fiō, fierī, factus sum</strong>, "to happen", "to come to pass", "to become". The third principal part may look familiar as the perfect passive of <em>faciō</em> -- that is because this irregular verb does often function as the passive voice of that verb, in the sense of "to be made" or "to be done".</p>
@@ -297,12 +319,12 @@
           <div class="card-header" id="separation-head">
 
             <h3 class="mb-0">
-              <button class="btn btn-success" data-toggle="collapse" data-target="#separation-body" aria-expanded="true" aria-controls="separation-body">Abl. of Separation</a>
+              Ablative of Separation
             </h3>
 
           </div>
 
-          <div id="separation-body" class="collapse" aria-labelledby="separation-head">
+          <div id="separation-body">
 
             <div class="card-body bg-light">
 
@@ -323,12 +345,12 @@
           <div class="card-header" id="means-agent-head">
 
             <h3 class="mb-0">
-              <button class="btn btn-success" data-toggle="collapse" data-target="#means-agent-body" aria-expanded="true" aria-controls="means-agent-body">Abl. of Means vs. Abl. of Agent</a>
+              Ablative of Means<br>vs. Ablative of Agent
             </h3>
 
           </div>
 
-          <div id="means-agent-body" class="collapse" aria-labelledby="means-agent-head">
+          <div id="means-agent-body">
 
             <div class="card-body bg-light">
 
@@ -349,12 +371,12 @@
           <div class="card-header" id="objective-genitive-head">
 
             <h3 class="mb-0">
-              <button class="btn btn-success" data-toggle="collapse" data-target="#objective-genitive-body" aria-expanded="true" aria-controls="objective-genitive-body">Objective and Subjective Genitive</a>
+              Objective and Subjective Genitive
             </h3>
 
           </div>
 
-          <div id="objective-genitive-body" class="collapse" aria-labelledby="objective-genitive-head">
+          <div id="objective-genitive-body">
 
             <div class="card-body bg-light">
 
@@ -388,12 +410,12 @@
           <div class="card-header" id="alt-2nd-head">
 
             <h3 class="mb-0">
-              <button class="btn btn-success" data-toggle="collapse" data-target="#alt-2nd-body" aria-expanded="true" aria-controls="alt-2nd-body">Alternative 2nd Singular Passive</a>
+              Alternative 2nd Singular Passive
             </h3>
 
           </div>
 
-          <div id="alt-2nd-body" class="collapse" aria-labelledby="alt-2nd-head">
+          <div id="alt-2nd-body">
 
             <div class="card-body bg-light">
 
@@ -425,14 +447,5 @@
 
 </div> <!-- row div for grid -->
 
-<script>
-  $('.panel-collapse').on('show.bs.collapse', function() {
-    $(this).siblings('.panel-heading').addClass('active');
-  });
-
-  $('.panel-collapse').on('hide.bs.collapse', function() {
-    $(this).siblings('.panel-heading').removeClass('active');
-  });
-</script>
 {% endif %}
 {% endblock %}
