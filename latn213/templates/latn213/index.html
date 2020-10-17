@@ -8,7 +8,7 @@
   <hr>
 
   <div class="pb-4 d-flex justify-content-center">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/9aIFDrDdEOs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/uRpv1Fj56K4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 
   <hr>
@@ -17,12 +17,19 @@
 
   {% if not x %}
   <dl class="mb-0 row">
-    <dt class="col-sm-5 text-right" {% else %}<h5 class="text-center" {% endif %}>Monday, 10/12{% if x %}</h5>{% else %}</dt>
+    <dt class="col-sm-5 text-right" {% else %}<h5 class="text-center" {% endif %}>Monday, 10/19{% if x %}</h5>{% else %}</dt>
     <dd class="col-sm-7">
       {% endif %}
       <ul>
-        <li>Complete <a href="https://docs.google.com/document/d/19IvkTtYJ3zmf_DGRH5TOZ1CwOdmjzcRy-sdeWt50xPM/edit?usp=sharing">Quiz #4 (Shelton 12.3-5)</a></li>
-        <li>Finish <a href="{% url 'latn213:schedule' %}#09-28-20">Shelton 12</a></li>
+        <li>Complete <a href="https://docs.google.com/document/d/1qBcR5LhR4O6bfrHWtWDOBAdZexMIOYhCScSfskxgxrc/edit?usp=sharing">Midterm</a></li>
+      </ul>
+      {% if not x %}
+    </dd>
+    <dt class="col-sm-5 text-right" {% else %}<h5 class="text-center" {% endif %}>Wednesday, 10/21{% if x %}</h5>{% else %}</dt>
+    <dd class="col-sm-7">
+      {% endif %}
+      <ul>
+        <li>Prepare Shelton 15.1-3</li>
       </ul>
       {% if not x %}
     </dd>
