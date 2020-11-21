@@ -7,33 +7,26 @@
 
   <hr>
 
-  <div class="pb-4 d-flex justify-content-center">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/R6lkoumDuk4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-
-  <hr>
-
   <h3 class="text-center text-uppercase pb-2">Next deadlines</h3>
 
   {% if not x %}
   <dl class="mb-0 row">
-    <dt class="col-sm-5 text-right" {% else %}<h5 class="text-center" {% endif %}>Tuesday, 11/10{% if x %}</h5>{% else %}</dt>
+    <dt class="col-sm-5 text-right" {% else %}<h5 class="text-center" {% endif %}>Tuesday, 12/1{% if x %}</h5>{% else %}</dt>
     <dd class="col-sm-7">
       {% endif %}
       <ul>
-        <li>Submit <a href="https://docs.google.com/document/d/1j97nLB45jOmwGM4MfxmBsnyGzyP9cssmUwpWOHCWuH8/edit?usp=sharing">Cicero Fact Sheet</a></li>
-        <li>Read in translation: <a href="http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0020:text=Cael.:chapter=14:section=33">Cicero <em>Pro Caelio</em> 33-36</a></li>
-        <li>Read <a href="https://drive.google.com/file/d/1MNNgOIAeMCyY_7vpaqxqeUtOnkwJsLwR/view?usp=sharing">Englert's intro (pp. 3-6)</a></li>
-        <li>Translate <a href="{% url 'latn399:schedule' %}#11-10-20">Cicero <em>Pro Caelio</em> 33-34</a> (targeted: 33) (make liber entry)</li>
+        <li>Submit: <a href="https://docs.google.com/document/d/1gg0qvta8DYKH1TC_JHlWTGEtgy0ttJbFDerkkCtYbnw/edit?usp=sharing">Tacitus Fact Sheet</a></li>
+        <li>Read (in translation): <a href="https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Tacitus/Annals/14B*.html">Tacitus <em>Annals</em> 14.31-37</a>.
+        <li>Translate: <a href="{% url 'latn399:schedule' %}#12-01-20">Tacitus <em>Annals</em> 14.31</a> (make liber entry)</li>
       </ul>
       {% if not x %}
     </dd>
-    <dt class="col-sm-5 text-right" {% else %}<h5 class="text-center" {% endif %}>Thursday, 11/12{% if x %}</h5>{% else %}</dt>
+    <dt class="col-sm-5 text-right" {% else %}<h5 class="text-center" {% endif %}>Thursday, 12/3{% if x %}</h5>{% else %}</dt>
     <dd class="col-sm-7">
       {% endif %}
       <ul>
-        <li>Translate <a href="{% url 'latn399:schedule' %}#11-12-20">Cicero <em>Pro Caelio</em> 35-36</a> (targeted: 35) (make liber entry)</li>
-        <li>Read <a href="https://drive.google.com/file/d/14eQJ1yaMgg66VUSR0Uj2F9_WdewxZGTi/view?usp=sharing">McCoy 2006</a> (make liber entry)</li>
+        <li>Translate <a href="{% url 'latn399:schedule' %}#12-03-20">Tacitus <em>Annals</em> 14.35, part of 37 (from <em>et miles ne mulierum quidem neci temperabat</em> to <em>Boudicca vitam veneno finivit</em>)</a> (make liber entry)</li>
+        <li>Read <a href="https://drive.google.com/file/d/1MkV3_E61lMpshw9AsxYpLCVbYME5Ab3k/view?usp=sharing">Gillespie 2018</a> (make liber entry)</li>
       </ul>
       {% if not x %}
     </dd>
